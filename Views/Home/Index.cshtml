@@ -1,0 +1,333 @@
+﻿@model PaginatedList<network_inventory_system.Models.Item>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="sidebar-filter">
+    <form asp-action="Index" method="get" id="filterForm">
+        <div class="mb-3"
+            <label class="form-label small">Search</label>
+            <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" class="form-control form-control-sm" placeholder="Search...">
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">Condition</label>
+            <select name="condition" class="form-select form-select-sm" onchange="this.form.submit()">
+                <option value="">All Conditions</option>
+                @foreach (var condition in (IEnumerable<string>)ViewData["Conditions"])
+                {
+                    if (!string.IsNullOrEmpty(condition))
+                    {
+                        <option value="@condition" selected="@(ViewData["ConditionFilter"]?.ToString() == condition)">@condition</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">Status</label>
+            <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
+                <option value="">All Statuses</option>
+                @foreach (var status in (IEnumerable<string>)ViewData["Statuses"])
+                {
+                    if (!string.IsNullOrEmpty(status))
+                    {
+                        <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status)">@status</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">Officer</label>
+            <select name="accountableOfficer" class="form-select form-select-sm" onchange="this.form.submit()">
+                <option value="">All Officers</option>
+                @foreach (var officer in (IEnumerable<string>)ViewData["Officers"])
+                {
+                    if (!string.IsNullOrEmpty(officer))
+                    {
+                        <option value="@officer" selected="@(ViewData["OfficerFilter"]?.ToString() == officer)">@officer</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">Division</label>
+            <select name="division" class="form-select form-select-sm" onchange="this.form.submit()">
+                <option value="">All Divisions</option>
+                @foreach (var division in (IEnumerable<string>)ViewData["Divisions"])
+                {
+                    if (!string.IsNullOrEmpty(division))
+                    {
+                        <option value="@division" selected="@(ViewData["DivisionFilter"]?.ToString() == division)">@division</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">From Date</label>
+            <input type="date" name="fromDate" value="@(ViewData["FromDateFilter"] != null ? ((DateTime)ViewData["FromDateFilter"]).ToString("yyyy-MM-dd") : "")" class="form-control form-control-sm">
+        </div>
+        <div class="mb-3">
+            <label class="form-label small">To Date</label>
+            <input type="date" name="toDate" value="@(ViewData["ToDateFilter"] != null ? ((DateTime)ViewData["ToDateFilter"]).ToString("yyyy-MM-dd") : "")" class="form-control form-control-sm">
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary btn-sm me-2">Apply</button>
+            <a asp-action="Index" class="btn btn-secondary btn-sm">Reset</a>
+        </div>
+    </form>
+</div>
+
+<div class="items-table">
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0">Inventory Items</h5>
+            <div>
+                <a asp-action="Create" class="btn btn-success btn-sm">
+                    Add New Item
+                </a>
+                <a asp-action="ExportToExcel"
+                    asp-route-sortOrder="@ViewData["CurrentSort"]"
+                    asp-route-searchString="@ViewData["CurrentFilter"]"
+                    asp-route-condition="@ViewData["ConditionFilter"]"
+                    asp-route-status="@ViewData["StatusFilter"]"
+                    asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                    asp-route-division="@ViewData["DivisionFilter"]"
+                    asp-route-fromDate="@ViewData["FromDateFilter"]"
+                    asp-route-toDate="@ViewData["ToDateFilter"]"
+                    class="btn btn-info btn-sm">
+                    Export to Excel
+                </a>
+                <button onclick="printInventory()" class="btn btn-secondary btn-sm">
+                    Print
+                </button>
+            </div>
+        </div>
+        <div class="card-body p-2">
+            <div class="table-responsive">
+                <table class="w-full table table-striped table-hover" id="inventoryTable">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Name
+                                </a>
+                            </th>
+                            <th>Photo</th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["SerialNoSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Serial No
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["PropertyNoSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Property No
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["ModelSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Model
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Price
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["CountSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Count
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Purchase Date
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["ConditionSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Condition
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["StatusSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Status
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["OfficerSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Officer
+                                </a>
+                            </th>
+                            <th>
+                                <a asp-action="Index" asp-route-sortOrder="@ViewData["DivisionSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
+                                    Division
+                                </a>
+                            </th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Name</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.Photo))
+                                    {
+                                        <img src="@item.Photo" alt="@item.Name" class="img-thumbnail" style="max-width: 50px; max-height: 50px;" />
+                                    }
+                                    else
+                                    {
+                                        <span>No Image</span>
+                                    }
+                                </td>
+                                <td>@item.SerialNo</td>
+                                <td>@item.PropertyNo</td>
+                                <td>@item.Model</td>
+                                <td>@item.Price.ToString("C")</td>
+                                <td>@item.Count</td>
+                                <td>@item.DateOfPurchase.ToString("yyyy-MM-dd")</td>
+                                <td>@item.Condition</td>
+                                <td>@item.Status</td>
+                                <td>@item.AccountableOfficer</td>
+                                <td>@item.Division</td>
+                                <td>
+                                    <div class="btn-group btn-group-sm" role="group">
+                                        <button type="button" class="btn btn-primary view-details" data-id="@item.Id">
+                                            View
+                                        </button>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                                            Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                                            Delete
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            @{
+                var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+                var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+            }
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item @prevDisabled">
+                        <a asp-action="Index"
+                            asp-route-sortOrder="@ViewData["CurrentSort"]"
+                            asp-route-pageNumber="@(Model.PageIndex - 1)"
+                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                            asp-route-condition="@ViewData["ConditionFilter"]"
+                            asp-route-status="@ViewData["StatusFilter"]"
+                            asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                            asp-route-division="@ViewData["DivisionFilter"]"
+                            asp-route-fromDate="@ViewData["FromDateFilter"]"
+                            asp-route-toDate="@ViewData["ToDateFilter"]"
+                            class="page-link @prevDisabled">
+                            Previous
+                        </a>
+                    </li>
+                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    {
+                        <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                            <a asp-action="Index"
+                                asp-route-sortOrder="@ViewData["CurrentSort"]"
+                                asp-route-pageNumber="@i"
+                                asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                                asp-route-condition="@ViewData["ConditionFilter"]"
+                                asp-route-status="@ViewData["StatusFilter"]"
+                                asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                                asp-route-division="@ViewData["DivisionFilter"]"
+                                asp-route-fromDate="@ViewData["FromDateFilter"]"
+                                asp-route-toDate="@ViewData["ToDateFilter"]"
+                                class="page-link">
+                                @i
+                            </a>
+                        </li>
+                    }
+                    <li class="page-item @nextDisabled">
+                        <a asp-action="Index"
+                            asp-route-sortOrder="@ViewData["CurrentSort"]"
+                            asp-route-pageNumber="@(Model.PageIndex + 1)"
+                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                            asp-route-condition="@ViewData["ConditionFilter"]"
+                            asp-route-status="@ViewData["StatusFilter"]"
+                            asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                            asp-route-division="@ViewData["DivisionFilter"]"
+                            asp-route-fromDate="@ViewData["FromDateFilter"]"
+                            asp-route-toDate="@ViewData["ToDateFilter"]"
+                            class="page-link @nextDisabled">
+                            Next
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="itemDetailsModalLabel">Item Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="itemDetailsContent">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.view-details').click(function () {
+                var id = $(this).data('id');
+                $('#itemDetailsContent').html('<div class="text-center"><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+                $('#itemDetailsModal').modal('show');
+
+                $.ajax({
+                    url: '@Url.Action("Details")/' + id,
+                    type: 'GET',
+                    success: function (result) {
+                        $('#itemDetailsContent').html(result);
+                    },
+                    error: function () {
+                        $('#itemDetailsContent').html('<div class="alert alert-danger">Error loading item details.</div>');
+                    }
+                });
+            });
+        });
+
+        function printInventory() {
+            var printContents = document.getElementById('inventoryTable').outerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = '<h1 class="text-center mb-4">Inventory Report</h1>' + printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+
+            $(document).ready(function () {
+                $('.view-details').click(function () {
+                    var id = $(this).data('id');
+                    $('#itemDetailsContent').html('<div class="text-center"><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+                    $.ajax({
+                        url: '@Url.Action("Details")/' + id,
+                        type: 'GET',
+                        success: function (result) {
+                            $('#itemDetailsContent').html(result);
+                        },
+                        error: function () {
+                            $('#itemDetailsContent').html('<div class="alert alert-danger">Error loading item details.</div>');
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+}

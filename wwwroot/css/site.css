@@ -1,0 +1,25 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh !important;
+}
+
+.sidebar-filter {
+    position: absolute;
+    width: 250px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 10px;
+}
+
+.items-table {
+    margin-left: 260px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    height: 100vh;
+}

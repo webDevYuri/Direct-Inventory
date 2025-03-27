@@ -1,0 +1,162 @@
+﻿@model network_inventory_system.Models.Item
+
+@{
+    ViewData["Title"] = "Edit Item";
+}
+
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Item Information</h5>
+        </div>
+        <div class="card-body">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Photo" />
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="SerialNo" class="form-label"></label>
+                        <input asp-for="SerialNo" class="form-control" />
+                        <span asp-validation-for="SerialNo" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="PropertyNo" class="form-label"></label>
+                        <input asp-for="PropertyNo" class="form-control" />
+                        <span asp-validation-for="PropertyNo" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="ControlNo" class="form-label"></label>
+                        <input asp-for="ControlNo" class="form-control" />
+                        <span asp-validation-for="ControlNo" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Model" class="form-label"></label>
+                        <input asp-for="Model" class="form-control" />
+                        <span asp-validation-for="Model" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Price" class="form-label"></label>
+                        <input asp-for="Price" class="form-control" type="number" step="0.01" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Count" class="form-label"></label>
+                        <input asp-for="Count" class="form-control" type="number" />
+                        <span asp-validation-for="Count" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="DateOfPurchase" class="form-label"></label>
+                        <input asp-for="DateOfPurchase" class="form-control" type="date" value="@Model.DateOfPurchase.ToString("yyyy-MM-dd")" />
+                        <span asp-validation-for="DateOfPurchase" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Condition" class="form-label"></label>
+                        <select asp-for="Condition" class="form-select">
+                            <option value="">Select Condition</option>
+                            <option value="New">New</option>
+                            <option value="Good">Good</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Poor">Poor</option>
+                            <option value="Damaged">Damaged</option>
+                        </select>
+                        <span asp-validation-for="Condition" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Status" class="form-label"></label>
+                        <select asp-for="Status" class="form-select">
+                            <option value="">Select Status</option>
+                            <option value="In Use">In Use</option>
+                            <option value="In Stock">In Stock</option>
+                            <option value="Under Repair">Under Repair</option>
+                            <option value="Disposed">Disposed</option>
+                            <option value="Lost">Lost</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="AccountableOfficer" class="form-label"></label>
+                        <input asp-for="AccountableOfficer" class="form-control" />
+                        <span asp-validation-for="AccountableOfficer" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Category" class="form-label"></label>
+                        <select asp-for="Category" class="form-select">
+                            <option value="">Select Category</option>
+                            <option value="Computer">Computer</option>
+                            <option value="Networking">Networking</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Office Equipment">Office Equipment</option>
+                            <option value="Electronics">Electronics</option>
+                        </select>
+                        <span asp-validation-for="Category" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Division" class="form-label"></label>
+                        <select asp-for="Division" class="form-select">
+                            <option value="">Select Division</option>
+                            <option value="IT">IT</option>
+                            <option value="HR">HR</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Operations">Operations</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                        <span asp-validation-for="Division" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="photoFile" class="form-label">Photo</label>
+                        <input type="file" name="photoFile" id="photoFile" class="form-control" accept="image/*" />
+                        @if (!string.IsNullOrEmpty(Model.Photo))
+                        {
+                            <div class="mt-2">
+                                <img src="@Model.Photo" alt="@Model.Name" class="img-thumbnail" style="max-width: 100px; max-height: 100px;" />
+                                <span class="ms-2">Current Photo</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
