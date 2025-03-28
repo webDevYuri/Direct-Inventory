@@ -1,10 +1,10 @@
 ﻿@model network_inventory_system.Models.Item
 
 <div class="row">
-    <div class="col-md-4 text-center">
+    <div class="col-md-4 text-center mb-3">
         @if (!string.IsNullOrEmpty(Model.Photo))
         {
-            <img src="@Model.Photo" alt="@Model.Name" class="img-fluid img-thumbnail mb-3" />
+            <img src="@Model.Photo" alt="@Model.Name" class="img-fluid img-thumbnail" style="border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
         }
         else
         {
@@ -12,51 +12,61 @@
         }
     </div>
     <div class="col-md-8">
-        <h4 class="mb-3">@Model.Name</h4>
-        <dl class="row">
-            <dt class="col-sm-4">Description</dt>
-            <dd class="col-sm-8">@Model.Description</dd>
-
-            <dt class="col-sm-4">Serial No</dt>
-            <dd class="col-sm-8">@Model.SerialNo</dd>
-
-            <dt class="col-sm-4">Property No</dt>
-            <dd class="col-sm-8">@Model.PropertyNo</dd>
-
-            <dt class="col-sm-4">Control No</dt>
-            <dd class="col-sm-8">@Model.ControlNo</dd>
-
-            <dt class="col-sm-4">Model</dt>
-            <dd class="col-sm-8">@Model.Model</dd>
-
-            <dt class="col-sm-4">Price</dt>
-            <dd class="col-sm-8">@Model.Price.ToString("C")</dd>
-
-            <dt class="col-sm-4">Count</dt>
-            <dd class="col-sm-8">@Model.Count</dd>
-
-            <dt class="col-sm-4">Date of Purchase</dt>
-            <dd class="col-sm-8">@Model.DateOfPurchase.ToString("yyyy-MM-dd")</dd>
-
-            <dt class="col-sm-4">Condition</dt>
-            <dd class="col-sm-8">@Model.Condition</dd>
-
-            <dt class="col-sm-4">Status</dt>
-            <dd class="col-sm-8">@Model.Status</dd>
-
-            <dt class="col-sm-4">Accountable Officer</dt>
-            <dd class="col-sm-8">@Model.AccountableOfficer</dd>
-
-            <dt class="col-sm-4">Category</dt>
-            <dd class="col-sm-8">@Model.Category</dd>
-
-            <dt class="col-sm-4">Division</dt>
-            <dd class="col-sm-8">@Model.Division</dd>
-        </dl>
+        <h4 class="mb-3" style="font-weight: 700; color: #2c3e50;">@Model.Name</h4>
+        <div style="font-size: 1rem; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Description</div>
+                <div style="width: 60%;">@Model.Description</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Serial No</div>
+                <div style="width: 60%;">@Model.SerialNo</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Property No</div>
+                <div style="width: 60%;">@Model.PropertyNo</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Control No</div>
+                <div style="width: 60%;">@Model.ControlNo</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Model</div>
+                <div style="width: 60%;">@Model.Model</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Price</div>
+                <div style="width: 60%;">@Model.Price.ToString("C")</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Date of Purchase</div>
+                <div style="width: 60%;">@Model.DateOfPurchase.ToString("yyyy-MM-dd")</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Condition</div>
+                <div style="width: 60%;">@Model.Condition</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Status</div>
+                <div style="width: 60%;">@Model.Status</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Accountable Officer</div>
+                <div style="width: 60%;">@Model.AccountableOfficer</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Category</div>
+                <div style="width: 60%;">@Model.Category</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                <div style="font-weight: 600; color: #495057; width: 35%;">Division</div>
+                <div style="width: 60%;">@Model.Division</div>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="d-flex justify-content-end mt-3">
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2">Edit</a>
-    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning me-2" style="border-radius: 8px; padding: 8px 16px; font-weight: 600;">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger" style="border-radius: 8px; padding: 8px 16px; font-weight: 600;">Delete</a>
 </div>

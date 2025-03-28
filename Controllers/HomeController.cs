@@ -29,7 +29,8 @@ namespace network_inventory_system.Controllers
             string division,
             DateTime? fromDate,
             DateTime? toDate,
-            int? pageNumber)
+            int? pageNumber,
+            int? pageSize) 
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -39,12 +40,17 @@ namespace network_inventory_system.Controllers
             ViewData["PropertyNoSortParm"] = sortOrder == "PropertyNo" ? "propertyno_desc" : "PropertyNo";
             ViewData["ControlNoSortParm"] = sortOrder == "ControlNo" ? "controlno_desc" : "ControlNo";
             ViewData["ModelSortParm"] = sortOrder == "Model" ? "model_desc" : "Model";
-            ViewData["CountSortParm"] = sortOrder == "Count" ? "count_desc" : "Count";
             ViewData["ConditionSortParm"] = sortOrder == "Condition" ? "condition_desc" : "Condition";
             ViewData["StatusSortParm"] = sortOrder == "Status" ? "status_desc" : "Status";
             ViewData["OfficerSortParm"] = sortOrder == "Officer" ? "officer_desc" : "Officer";
             ViewData["CategorySortParm"] = sortOrder == "Category" ? "category_desc" : "Category";
             ViewData["DivisionSortParm"] = sortOrder == "Division" ? "division_desc" : "Division";
+
+            ViewData["PageSizeOptions"] = new List<int> { 5, 10, 20, 50, 100 };
+
+            int defaultPageSize = 10;
+            int currentPageSize = pageSize ?? defaultPageSize;
+            ViewData["CurrentPageSize"] = currentPageSize;
 
             if (searchString != null)
             {
@@ -63,7 +69,6 @@ namespace network_inventory_system.Controllers
             ViewData["FromDateFilter"] = fromDate;
             ViewData["ToDateFilter"] = toDate;
 
-            // Get distinct values for dropdowns
             ViewData["Conditions"] = await _context.Items.Select(i => i.Condition).Distinct().ToListAsync();
             ViewData["Statuses"] = await _context.Items.Select(i => i.Status).Distinct().ToListAsync();
             ViewData["Officers"] = await _context.Items.Select(i => i.AccountableOfficer).Distinct().ToListAsync();
@@ -72,7 +77,6 @@ namespace network_inventory_system.Controllers
             var items = from i in _context.Items
                         select i;
 
-            // Apply filters
             if (!String.IsNullOrEmpty(searchString))
             {
                 items = items.Where(s => s.Name.Contains(searchString)
@@ -112,7 +116,6 @@ namespace network_inventory_system.Controllers
                 items = items.Where(s => s.DateOfPurchase <= toDate.Value);
             }
 
-            // Apply sorting
             switch (sortOrder)
             {
                 case "name_desc":
@@ -154,12 +157,6 @@ namespace network_inventory_system.Controllers
                 case "model_desc":
                     items = items.OrderByDescending(s => s.Model);
                     break;
-                case "Count":
-                    items = items.OrderBy(s => s.Count);
-                    break;
-                case "count_desc":
-                    items = items.OrderByDescending(s => s.Count);
-                    break;
                 case "Condition":
                     items = items.OrderBy(s => s.Condition);
                     break;
@@ -195,8 +192,7 @@ namespace network_inventory_system.Controllers
                     break;
             }
 
-            int pageSize = 10;
-            return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, pageSize));
+            return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, currentPageSize));
         }
 
         public IActionResult Create()
@@ -210,7 +206,6 @@ namespace network_inventory_system.Controllers
         {
             try
             {
-                // Remove the Photo validation error if a file is uploaded
                 if (photoFile != null && photoFile.Length > 0 && ModelState.ContainsKey("Photo"))
                 {
                     ModelState.Remove("Photo");
@@ -218,7 +213,6 @@ namespace network_inventory_system.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    // Handle photo upload
                     if (photoFile != null && photoFile.Length > 0)
                     {
                         string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "images", "items");
@@ -239,11 +233,9 @@ namespace network_inventory_system.Controllers
                     }
                     else
                     {
-                        // Set a default value or placeholder for Photo if it's required
                         item.Photo = "/images/items/placeholder.png";
                     }
 
-                    // Set default values if not provided
                     if (item.DateOfPurchase == default)
                     {
                         item.DateOfPurchase = DateTime.Now;
@@ -255,7 +247,6 @@ namespace network_inventory_system.Controllers
                 }
                 else
                 {
-                    // Log validation errors for debugging
                     foreach (var modelStateKey in ModelState.Keys)
                     {
                         var modelStateVal = ModelState[modelStateKey];
@@ -268,11 +259,9 @@ namespace network_inventory_system.Controllers
             }
             catch (Exception ex)
             {
-                // Add the exception message to ModelState
                 ModelState.AddModelError("", $"An error occurred: {ex.Message}");
             }
 
-            // If we got this far, something failed, redisplay form
             return View(item);
         }
 
@@ -312,7 +301,6 @@ namespace network_inventory_system.Controllers
                             Directory.CreateDirectory(uploadsFolder);
                         }
 
-                        // Delete old photo if exists
                         if (!string.IsNullOrEmpty(item.Photo))
                         {
                             string oldFilePath = Path.Combine(_hostEnvironment.WebRootPath, item.Photo.TrimStart('/'));
@@ -522,7 +510,6 @@ namespace network_inventory_system.Controllers
                     worksheet.Cell(currentRow, 6).Value = item.ControlNo;
                     worksheet.Cell(currentRow, 7).Value = item.Model;
                     worksheet.Cell(currentRow, 8).Value = item.Price;
-                    worksheet.Cell(currentRow, 9).Value = item.Count;
                     worksheet.Cell(currentRow, 10).Value = item.DateOfPurchase.ToString("yyyy-MM-dd");
                     worksheet.Cell(currentRow, 11).Value = item.Condition;
                     worksheet.Cell(currentRow, 12).Value = item.Status;

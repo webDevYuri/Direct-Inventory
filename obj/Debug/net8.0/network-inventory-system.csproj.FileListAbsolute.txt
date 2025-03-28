@@ -168,3 +168,4 @@ C:\Users\Yuri Gonzaga\Desktop\network-inventory-system\network-inventory-system\
 C:\Users\Yuri Gonzaga\Desktop\network-inventory-system\network-inventory-system\bin\Debug\net8.0\SixLabors.Fonts.dll
 C:\Users\Yuri Gonzaga\Desktop\network-inventory-system\network-inventory-system\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\Yuri Gonzaga\Desktop\network-inventory-system\network-inventory-system\bin\Debug\net8.0\BootstrapIcons.AspNetCore.dll
+C:\Users\Yuri Gonzaga\Desktop\network-inventory-system\network-inventory-system\obj\Debug\net8.0\network-inventory-system.sourcelink.json

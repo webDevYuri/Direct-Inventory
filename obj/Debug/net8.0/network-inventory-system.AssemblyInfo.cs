@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("network-inventory-system")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2202a12fdbae6a2a62142f8923a85d44e3ae1aa4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fe7886f516b24d08170618689a3ebb142680bc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("network-inventory-system")]
 [assembly: System.Reflection.AssemblyTitleAttribute("network-inventory-system")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

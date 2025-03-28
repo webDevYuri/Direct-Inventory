@@ -201,6 +201,10 @@
       "PackagePath": "staticwebassets\\images\\icons\\eye-look-icon.png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\icons\\list-round-bullet-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\list-round-bullet-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\icons\\plus-line-icon.png",
       "PackagePath": "staticwebassets\\images\\icons\\plus-line-icon.png"
     },
@@ -213,12 +217,36 @@
       "PackagePath": "staticwebassets\\images\\icons\\recycle-bin-line-icon.png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\icons\\search-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\search-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png",
+      "PackagePath": "staticwebassets\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
       "PackagePath": "staticwebassets\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png",
+      "PackagePath": "staticwebassets\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png",
+      "PackagePath": "staticwebassets\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg",
       "PackagePath": "staticwebassets\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png",
+      "PackagePath": "staticwebassets\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png",
+      "PackagePath": "staticwebassets\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png"
     },
     {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\logo\\PHilMech.png",

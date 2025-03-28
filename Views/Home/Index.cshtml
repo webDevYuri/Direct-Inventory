@@ -4,171 +4,171 @@
 }
 
 <div class="sidebar-filter">
-    <form asp-action="Index" method="get" id="filterForm">
-        <div class="mb-3"
-            <label class="form-label small">Search</label>
-            <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" class="form-control form-control-sm" placeholder="Search...">
+    <center>
+        <div class="logo-container d-flex justify-content-center align-items-center mb-4" style="border-radius: 30px 0 30px 0; width: 110px; height: 110px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+            <img src="~/images/logo/PHilMech.png" class="p-2 img-fluid" style="width: 90px" />
         </div>
-        <div class="mb-3">
-            <label class="form-label small">Condition</label>
-            <select name="condition" class="form-select form-select-sm" onchange="this.form.submit()">
+    </center>
+    <form asp-action="Index" method="get" id="filterForm">
+        <div class="mb-2 position-relative">
+            <input type="text" name="SearchString" id="SearchString" value="@ViewData["CurrentFilter"]" class="form-control form-control-sm py-2" placeholder="Search...">
+            <img src="~/images/icons/search-icon.png" class="position-absolute" style="right: 10px; top: 10px; width: 20px;" alt="Seach Icon" />
+        </div>
+
+        <div class="form-floating mb-2">
+            <select name="pageSize" id="pageSize" class="form-select form-select-sm" onchange="this.form.submit()">
+                @foreach (int size in (List<int>)ViewData["PageSizeOptions"])
+                {
+                    if (size == (int)ViewData["CurrentPageSize"])
+                    {
+                        <option value="@size" selected="selected">@size</option>
+                    }
+                    else
+                    {
+                        <option value="@size">@size</option>
+                    }
+                }
+            </select>
+            <label for="pageSize">Entries per page</label>
+        </div>
+
+
+        <div class="form-floating mb-2">
+            <select name="condition" id="condition" class="form-select form-select-sm" onchange="this.form.submit()">
                 <option value="">All Conditions</option>
                 @foreach (var condition in (IEnumerable<string>)ViewData["Conditions"])
                 {
                     if (!string.IsNullOrEmpty(condition))
                     {
-                        <option value="@condition" selected="@(ViewData["ConditionFilter"]?.ToString() == condition)">@condition</option>
+                        <option value="@condition" selected="@(ViewData["ConditionFilter"]?.ToString() == condition)">
+                            @condition
+                        </option>
                     }
                 }
             </select>
+            <label for="condition">Condition</label>
         </div>
-        <div class="mb-3">
-            <label class="form-label small">Status</label>
-            <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
+
+        <div class="form-floating mb-2">
+            <select name="status" id="status" class="form-select form-select-sm" onchange="this.form.submit()">
                 <option value="">All Statuses</option>
                 @foreach (var status in (IEnumerable<string>)ViewData["Statuses"])
                 {
                     if (!string.IsNullOrEmpty(status))
                     {
-                        <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status)">@status</option>
+                        <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status)">
+                            @status
+                        </option>
                     }
                 }
             </select>
+            <label for="status">Status</label>
         </div>
-        <div class="mb-3">
-            <label class="form-label small">Officer</label>
-            <select name="accountableOfficer" class="form-select form-select-sm" onchange="this.form.submit()">
+
+        <div class="form-floating mb-2">
+            <select name="accountableOfficer" id="accountableOfficer" class="form-select form-select-sm" onchange="this.form.submit()">
                 <option value="">All Officers</option>
                 @foreach (var officer in (IEnumerable<string>)ViewData["Officers"])
                 {
                     if (!string.IsNullOrEmpty(officer))
                     {
-                        <option value="@officer" selected="@(ViewData["OfficerFilter"]?.ToString() == officer)">@officer</option>
+                        <option value="@officer" selected="@(ViewData["OfficerFilter"]?.ToString() == officer)">
+                            @officer
+                        </option>
                     }
                 }
             </select>
+            <label for="accountableOfficer">Officer</label>
         </div>
-        <div class="mb-3">
-            <label class="form-label small">Division</label>
-            <select name="division" class="form-select form-select-sm" onchange="this.form.submit()">
+
+        <div class="form-floating mb-2">
+            <select name="division" id="division" class="form-select form-select-sm" onchange="this.form.submit()">
                 <option value="">All Divisions</option>
                 @foreach (var division in (IEnumerable<string>)ViewData["Divisions"])
                 {
                     if (!string.IsNullOrEmpty(division))
                     {
-                        <option value="@division" selected="@(ViewData["DivisionFilter"]?.ToString() == division)">@division</option>
+                        <option value="@division" selected="@(ViewData["DivisionFilter"]?.ToString() == division)">
+                            @division
+                        </option>
                     }
                 }
             </select>
+            <label for="division">Division</label>
         </div>
-        <div class="mb-3">
-            <label class="form-label small">From Date</label>
-            <input type="date" name="fromDate" value="@(ViewData["FromDateFilter"] != null ? ((DateTime)ViewData["FromDateFilter"]).ToString("yyyy-MM-dd") : "")" class="form-control form-control-sm">
+
+        <div class="form-floating mb-2">
+            <input type="date" name="fromDate" id="fromDate"
+                   value="@(ViewData["FromDateFilter"] != null ? ((DateTime)ViewData["FromDateFilter"]).ToString("yyyy-MM-dd") : "")"
+                   class="form-control form-control-sm" placeholder="From Date">
+            <label for="fromDate">From Date</label>
         </div>
-        <div class="mb-3">
-            <label class="form-label small">To Date</label>
-            <input type="date" name="toDate" value="@(ViewData["ToDateFilter"] != null ? ((DateTime)ViewData["ToDateFilter"]).ToString("yyyy-MM-dd") : "")" class="form-control form-control-sm">
+
+        <div class="form-floating mb-2">
+            <input type="date" name="toDate" id="toDate"
+                   value="@(ViewData["ToDateFilter"] != null ? ((DateTime)ViewData["ToDateFilter"]).ToString("yyyy-MM-dd") : "")"
+                   class="form-control form-control-sm" placeholder="To Date">
+            <label for="toDate">To Date</label>
         </div>
-        <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary btn-sm me-2">Apply</button>
-            <a asp-action="Index" class="btn btn-secondary btn-sm">Reset</a>
+
+        <div class="d-flex flex-column gap-2 justify-content-center">
+            <button type="submit" class="btn btn-primary btn-sm">APPLY</button>
+            <a asp-action="Index" class="btn btn-outline-secondary btn-sm">RESET</a>
         </div>
     </form>
 </div>
 
 <div class="items-table">
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-            <h5 class="mb-0">Inventory Items</h5>
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <img src="~/images/icons/list-round-bullet-icon.png" style="width:30px; height:25px" />
+                <h4 class="mb-0 ms-2">Items</h4>
+            </div>
             <div>
-                <a asp-action="Create" class="btn btn-success btn-sm">
-                    Add New Item
+                <a asp-action="Create" class="btn btn-primary btn-sm">
+                    ADD
                 </a>
                 <a asp-action="ExportToExcel"
-                    asp-route-sortOrder="@ViewData["CurrentSort"]"
-                    asp-route-searchString="@ViewData["CurrentFilter"]"
-                    asp-route-condition="@ViewData["ConditionFilter"]"
-                    asp-route-status="@ViewData["StatusFilter"]"
-                    asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                    asp-route-division="@ViewData["DivisionFilter"]"
-                    asp-route-fromDate="@ViewData["FromDateFilter"]"
-                    asp-route-toDate="@ViewData["ToDateFilter"]"
-                    class="btn btn-info btn-sm">
-                    Export to Excel
+                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                   asp-route-searchString="@ViewData["CurrentFilter"]"
+                   asp-route-condition="@ViewData["ConditionFilter"]"
+                   asp-route-status="@ViewData["StatusFilter"]"
+                   asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                   asp-route-division="@ViewData["DivisionFilter"]"
+                   asp-route-fromDate="@ViewData["FromDateFilter"]"
+                   asp-route-toDate="@ViewData["ToDateFilter"]"
+                   class="btn btn-success btn-sm">
+                    EXPORT
                 </a>
                 <button onclick="printInventory()" class="btn btn-secondary btn-sm">
-                    Print
+                    PRINT
                 </button>
             </div>
         </div>
         <div class="card-body p-2">
             <div class="table-responsive">
-                <table class="w-full table table-striped table-hover" id="inventoryTable">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Name
-                                </a>
-                            </th>
+                <table class="w-full table table-hover table-bordered small" id="inventoryTable">
+                    <thead class="table-secondary">
+                        <tr class="text-uppercase" style="font-size: 12px; text-align: center">
+                            <th>Name</th>
                             <th>Photo</th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["SerialNoSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Serial No
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["PropertyNoSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Property No
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["ModelSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Model
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Price
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["CountSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Count
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Purchase Date
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["ConditionSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Condition
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["StatusSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Status
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["OfficerSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Officer
-                                </a>
-                            </th>
-                            <th>
-                                <a asp-action="Index" asp-route-sortOrder="@ViewData["DivisionSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">
-                                    Division
-                                </a>
-                            </th>
+                            <th>Serial No</th>
+                            <th>Property No</th>
+                            <th>Model</th>
+                            <th>Price</th>
+                            <th>Purchase Date</th>
+                            <th>Condition</th>
+                            <th>Status</th>
+                            <th>Officer</th>
+                            <th>Division</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
+                            <tr class="text-center" style="font-size: 11px">
                                 <td>@item.Name</td>
                                 <td>
                                     @if (!string.IsNullOrEmpty(item.Photo))
@@ -184,7 +184,6 @@
                                 <td>@item.PropertyNo</td>
                                 <td>@item.Model</td>
                                 <td>@item.Price.ToString("C")</td>
-                                <td>@item.Count</td>
                                 <td>@item.DateOfPurchase.ToString("yyyy-MM-dd")</td>
                                 <td>@item.Condition</td>
                                 <td>@item.Status</td>
@@ -192,14 +191,14 @@
                                 <td>@item.Division</td>
                                 <td>
                                     <div class="btn-group btn-group-sm" role="group">
-                                        <button type="button" class="btn btn-primary view-details" data-id="@item.Id">
-                                            View
+                                        <button style="width: 35px" type="button" class="btn btn-primary view-details d-flex align-items-center justify-content-center" data-id="@item.Id">
+                                            <img src="~/images/icons/eye-look-icon.png" alt="Eye" style="width: 20px" />
                                         </button>
-                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
-                                            Edit
+                                        <a style="width: 35px" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning d-flex align-items-center justify-content-center">
+                                            <img src="~/images/icons/edit-list-icon.png" alt="Eye" style="width: 20px" />
                                         </a>
-                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
-                                            Delete
+                                        <a style="width: 35px" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                            <img src="~/images/icons/recycle-bin-line-icon.png" alt="Eye" style="width: 20px" />
                                         </a>
                                     </div>
                                 </td>
@@ -214,20 +213,20 @@
                 var nextDisabled = !Model.HasNextPage ? "disabled" : "";
             }
 
-            <nav aria-label="Page navigation">
+            <nav aria-label="Page navigation" class="mt-4">
                 <ul class="pagination justify-content-center">
                     <li class="page-item @prevDisabled">
                         <a asp-action="Index"
-                            asp-route-sortOrder="@ViewData["CurrentSort"]"
-                            asp-route-pageNumber="@(Model.PageIndex - 1)"
-                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                            asp-route-condition="@ViewData["ConditionFilter"]"
-                            asp-route-status="@ViewData["StatusFilter"]"
-                            asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                            asp-route-division="@ViewData["DivisionFilter"]"
-                            asp-route-fromDate="@ViewData["FromDateFilter"]"
-                            asp-route-toDate="@ViewData["ToDateFilter"]"
-                            class="page-link @prevDisabled">
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                           asp-route-condition="@ViewData["ConditionFilter"]"
+                           asp-route-status="@ViewData["StatusFilter"]"
+                           asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                           asp-route-division="@ViewData["DivisionFilter"]"
+                           asp-route-fromDate="@ViewData["FromDateFilter"]"
+                           asp-route-toDate="@ViewData["ToDateFilter"]"
+                           class="page-link text-center @prevDisabled" style="width: 90px">
                             Previous
                         </a>
                     </li>
@@ -235,32 +234,32 @@
                     {
                         <li class="page-item @(i == Model.PageIndex ? "active" : "")">
                             <a asp-action="Index"
-                                asp-route-sortOrder="@ViewData["CurrentSort"]"
-                                asp-route-pageNumber="@i"
-                                asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                                asp-route-condition="@ViewData["ConditionFilter"]"
-                                asp-route-status="@ViewData["StatusFilter"]"
-                                asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                                asp-route-division="@ViewData["DivisionFilter"]"
-                                asp-route-fromDate="@ViewData["FromDateFilter"]"
-                                asp-route-toDate="@ViewData["ToDateFilter"]"
-                                class="page-link">
+                               asp-route-sortOrder="@ViewData["CurrentSort"]"
+                               asp-route-pageNumber="@i"
+                               asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                               asp-route-condition="@ViewData["ConditionFilter"]"
+                               asp-route-status="@ViewData["StatusFilter"]"
+                               asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                               asp-route-division="@ViewData["DivisionFilter"]"
+                               asp-route-fromDate="@ViewData["FromDateFilter"]"
+                               asp-route-toDate="@ViewData["ToDateFilter"]"
+                               class="page-link">
                                 @i
                             </a>
                         </li>
                     }
                     <li class="page-item @nextDisabled">
                         <a asp-action="Index"
-                            asp-route-sortOrder="@ViewData["CurrentSort"]"
-                            asp-route-pageNumber="@(Model.PageIndex + 1)"
-                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                            asp-route-condition="@ViewData["ConditionFilter"]"
-                            asp-route-status="@ViewData["StatusFilter"]"
-                            asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                            asp-route-division="@ViewData["DivisionFilter"]"
-                            asp-route-fromDate="@ViewData["FromDateFilter"]"
-                            asp-route-toDate="@ViewData["ToDateFilter"]"
-                            class="page-link @nextDisabled">
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                           asp-route-condition="@ViewData["ConditionFilter"]"
+                           asp-route-status="@ViewData["StatusFilter"]"
+                           asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                           asp-route-division="@ViewData["DivisionFilter"]"
+                           asp-route-fromDate="@ViewData["FromDateFilter"]"
+                           asp-route-toDate="@ViewData["ToDateFilter"]"
+                           class="page-link text-center @nextDisabled" style="width: 90px">
                             Next
                         </a>
                     </li>
@@ -272,16 +271,17 @@
 
 <div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="itemDetailsModalLabel">Item Details</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content" style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+            <div class="modal-header" style="background: linear-gradient(120deg, #30c57d, #2ddf89);">
+                <h5 class="modal-title text-white" id="itemDetailsModalLabel">Item Details</h5>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="itemDetailsContent">
             </div>
         </div>
     </div>
 </div>
+
 
 @section Scripts {
     <script>

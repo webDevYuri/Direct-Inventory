@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh !important;
+    height: 98vh !important;
 }
 
 .sidebar-filter {
@@ -14,12 +14,11 @@ body {
     top: 0;
     left: 0;
     height: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-right: 1px solid #f3f3f3;
     padding: 10px;
 }
 
 .items-table {
-    margin-left: 260px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-left: 250px;
     height: 100vh;
 }

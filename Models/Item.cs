@@ -32,7 +32,6 @@ namespace network_inventory_system.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
-        public int Count { get; set; }
 
         public DateTime DateOfPurchase { get; set; }
 

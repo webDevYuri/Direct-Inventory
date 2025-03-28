@@ -588,8 +588,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qgl6v9ydfk</Fingerprint>
-      <Integrity>1qp4jFvw8zCbYPprWuxE1qZkt5Ng7qa9n8GLjN/J8aA=</Integrity>
+      <Fingerprint>pa8heq5dmu</Fingerprint>
+      <Integrity>v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -660,11 +660,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>899lpgaxwg</Fingerprint>
-      <Integrity>HPs2Y/AGvN0TOsVIky+dva0mqNc3uWWPlt9ZP1WLqLI=</Integrity>
+      <Fingerprint>ifr1vccav8</Fingerprint>
+      <Integrity>4k8CnWOvnP3qEoU5ANXO5auheWs728tOjCUdx33CNcw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\eye-look-icon.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\list-round-bullet-icon.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/icons/list-round-bullet-icon.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oylmnbqaov</Fingerprint>
+      <Integrity>UERj+B40wR++0V64Yyqx2klhvA3NI8AukS6En+TYVCg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\list-round-bullet-icon.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\plus-line-icon.png'))">
       <SourceType>Package</SourceType>
@@ -678,8 +696,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>zcj7jid6mp</Fingerprint>
-      <Integrity>wyifiR4KVtEAyMlrXSplkzvUmI97ByypvxO05cXccN8=</Integrity>
+      <Fingerprint>jh85iaf4jb</Fingerprint>
+      <Integrity>N2T1ouDPTQst0mULBuT0ypDPJP2YWcknzBhY623/N74=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\plus-line-icon.png'))</OriginalItemSpec>
@@ -714,11 +732,47 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wharxhaolm</Fingerprint>
-      <Integrity>HE0gJDm8mDXAVFXsDAU+hQ6LsUY5NXY0Rxgy+SJXP2I=</Integrity>
+      <Fingerprint>ufsqkhjh5g</Fingerprint>
+      <Integrity>evpt4MIWVc1wPz2PvNxCliE302TCrmgYG7LzCjTqr4A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\recycle-bin-line-icon.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\search-icon.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/icons/search-icon.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vydptjl6yd</Fingerprint>
+      <Integrity>90sbCtkV8/J0RLTOKJwKnlsOVh3m6Ytx2wMPQw0QefQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\icons\search-icon.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/items/1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8xsgwxfy8j</Fingerprint>
+      <Integrity>bKr5KKyUE10aFhpwMe3Qu+YPVwESDW6hJcT+CSCtSi0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg'))">
       <SourceType>Package</SourceType>
@@ -738,6 +792,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/items/395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yewt2l4yik</Fingerprint>
+      <Integrity>Wr+6GdutqZBtnqXkJF8+EOUjXOVz+E+Bwwom//reOac=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/items/9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ar2ptbd0o0</Fingerprint>
+      <Integrity>ygyWII+tTeLm1bbfr/z8kURLjG7tQ2PJKlYL1tBvygo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>network-inventory-system</SourceId>
@@ -755,6 +845,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/items/b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yewt2l4yik</Fingerprint>
+      <Integrity>Wr+6GdutqZBtnqXkJF8+EOUjXOVz+E+Bwwom//reOac=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>network-inventory-system</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/network-inventory-system</BasePath>
+      <RelativePath>images/items/ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ar2ptbd0o0</Fingerprint>
+      <Integrity>ygyWII+tTeLm1bbfr/z8kURLjG7tQ2PJKlYL1tBvygo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\items\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\logo\PHilMech.png'))">
       <SourceType>Package</SourceType>
