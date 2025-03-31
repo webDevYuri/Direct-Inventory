@@ -9,7 +9,7 @@ body {
 }
 
 .sidebar-filter {
-    position: absolute;
+    position: fixed;
     width: 250px;
     top: 0;
     left: 0;
@@ -21,4 +21,5 @@ body {
 .items-table {
     margin-left: 250px;
     height: 100vh;
+    max-height: 100vh;
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "R7AxJDFawRjc/rpeQw1XwTxsqUbaAkCZf2tZ5ikPSqc=",
+  "Hash": "mSeMOPgobu0rYLfOcgCukQgtXSwVhY7yVgMDOrSe4BA=",
   "Source": "network-inventory-system",
   "BasePath": "_content/network-inventory-system",
   "Mode": "Default",
@@ -997,8 +997,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "pa8heq5dmu",
-      "Integrity": "v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms=",
+      "Fingerprint": "nchvxw814e",
+      "Integrity": "aZVUy02VI4mMyPlfgs1WJZKBoww06Cq2BhLB0fJNK60=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1193,6 +1193,27 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\search-icon.png"
     },
     {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hqepw0f9e8",
+      "Integrity": "2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png"
+    },
+    {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png",
       "SourceId": "network-inventory-system",
       "SourceType": "Discovered",
@@ -1214,12 +1235,12 @@
       "OriginalItemSpec": "wwwroot\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png"
     },
     {
-      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png",
       "SourceId": "network-inventory-system",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
       "BasePath": "_content/network-inventory-system",
-      "RelativePath": "images/items/2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400#[.{fingerprint}]?.jpg",
+      "RelativePath": "images/items/212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8)#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1228,11 +1249,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sma5gkpzb0",
-      "Integrity": "FPWottmYYdZuLS7hui34zGlde68i5eUzeFMEGIMntxo=",
+      "Fingerprint": "hqepw0f9e8",
+      "Integrity": "2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "75q69f1azu",
+      "Integrity": "JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hqepw0f9e8",
+      "Integrity": "2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png"
     },
     {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png",
@@ -1256,6 +1319,27 @@
       "OriginalItemSpec": "wwwroot\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png"
     },
     {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "75q69f1azu",
+      "Integrity": "JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png"
+    },
+    {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png",
       "SourceId": "network-inventory-system",
       "SourceType": "Discovered",
@@ -1275,6 +1359,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "75q69f1azu",
+      "Integrity": "JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hqepw0f9e8",
+      "Integrity": "2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png"
     },
     {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg",
@@ -1298,6 +1424,48 @@
       "OriginalItemSpec": "wwwroot\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg"
     },
     {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hqepw0f9e8",
+      "Integrity": "2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "75q69f1azu",
+      "Integrity": "JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png"
+    },
+    {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png",
       "SourceId": "network-inventory-system",
       "SourceType": "Discovered",
@@ -1319,6 +1487,27 @@
       "OriginalItemSpec": "wwwroot\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png"
     },
     {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0tadcie2ag",
+      "Integrity": "DBS65qJoCI2zduN0ae58c+URJPnMeR/pyx6e6TuwM1U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png"
+    },
+    {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png",
       "SourceId": "network-inventory-system",
       "SourceType": "Discovered",
@@ -1338,6 +1527,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png"
+    },
+    {
+      "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png",
+      "SourceId": "network-inventory-system",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\",
+      "BasePath": "_content/network-inventory-system",
+      "RelativePath": "images/items/ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7)#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "igqui03j0w",
+      "Integrity": "jtzQUxTHice8TK9V39kYL9hNPE1+8UocHOirUZptBx0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png"
     },
     {
       "Identity": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\logo\\PHilMech.png",
@@ -5215,7 +5425,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "368"
+          "Value": "389"
         },
         {
           "Name": "Content-Type",
@@ -5223,11 +5433,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms=\""
+          "Value": "\"aZVUy02VI4mMyPlfgs1WJZKBoww06Cq2BhLB0fJNK60=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:49:09 GMT"
+          "Value": "Fri, 28 Mar 2025 02:01:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5237,12 +5447,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms="
+          "Value": "sha256-aZVUy02VI4mMyPlfgs1WJZKBoww06Cq2BhLB0fJNK60="
         }
       ]
     },
     {
-      "Route": "css/site.pa8heq5dmu.css",
+      "Route": "css/site.nchvxw814e.css",
       "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -5252,7 +5462,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "368"
+          "Value": "389"
         },
         {
           "Name": "Content-Type",
@@ -5260,11 +5470,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms=\""
+          "Value": "\"aZVUy02VI4mMyPlfgs1WJZKBoww06Cq2BhLB0fJNK60=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 27 Mar 2025 04:49:09 GMT"
+          "Value": "Fri, 28 Mar 2025 02:01:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5274,7 +5484,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "pa8heq5dmu"
+          "Value": "nchvxw814e"
         },
         {
           "Name": "label",
@@ -5282,7 +5492,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-v7XlytIpq2OwLB6gyc6uk+47bjYmJ79e+bBdcG08Xms="
+          "Value": "sha256-aZVUy02VI4mMyPlfgs1WJZKBoww06Cq2BhLB0fJNK60="
         }
       ]
     },
@@ -6025,6 +6235,88 @@
       ]
     },
     {
+      "Route": "images/items/079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).hqepw0f9e8.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hqepw0f9e8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:51:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
       "Route": "images/items/1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).8xsgwxfy8j.png",
       "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png",
       "Selectors": [],
@@ -6107,8 +6399,8 @@
       ]
     },
     {
-      "Route": "images/items/2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
-      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
+      "Route": "images/items/212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).hqepw0f9e8.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6117,56 +6409,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "518557"
+          "Value": "691135"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"FPWottmYYdZuLS7hui34zGlde68i5eUzeFMEGIMntxo=\""
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 06:03:17 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-FPWottmYYdZuLS7hui34zGlde68i5eUzeFMEGIMntxo="
-        }
-      ]
-    },
-    {
-      "Route": "images/items/2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.sma5gkpzb0.jpg",
-      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "518557"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"FPWottmYYdZuLS7hui34zGlde68i5eUzeFMEGIMntxo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 25 Mar 2025 06:03:17 GMT"
+          "Value": "Fri, 28 Mar 2025 00:53:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6176,15 +6431,216 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sma5gkpzb0"
+          "Value": "hqepw0f9e8"
         },
         {
           "Name": "label",
-          "Value": "images/items/2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg"
+          "Value": "images/items/212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-FPWottmYYdZuLS7hui34zGlde68i5eUzeFMEGIMntxo="
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:53:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.75q69f1azu.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:01:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "75q69f1azu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:01:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).hqepw0f9e8.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hqepw0f9e8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
         }
       ]
     },
@@ -6271,6 +6727,88 @@
       ]
     },
     {
+      "Route": "images/items/9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.75q69f1azu.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:08:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "75q69f1azu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:08:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
       "Route": "images/items/9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).ar2ptbd0o0.png",
       "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png",
       "Selectors": [],
@@ -6349,6 +6887,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-ygyWII+tTeLm1bbfr/z8kURLjG7tQ2PJKlYL1tBvygo="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.75q69f1azu.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:02:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "75q69f1azu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:02:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).hqepw0f9e8.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:47:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hqepw0f9e8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:47:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
         }
       ]
     },
@@ -6435,6 +7137,170 @@
       ]
     },
     {
+      "Route": "images/items/af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).hqepw0f9e8.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:55:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hqepw0f9e8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691135"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:55:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2Wa2AD43p6A7A7oIECA1P+90RnsgEASP5MlbrrZ4TQ8="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.75q69f1azu.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:04:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "75q69f1azu"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "280974"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 01:04:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JWG8a8GP97qD3qplYCq8Ocn6uRy6vARpReFHrOKqSVA="
+        }
+      ]
+    },
+    {
       "Route": "images/items/b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png",
       "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png",
       "Selectors": [],
@@ -6517,6 +7383,88 @@
       ]
     },
     {
+      "Route": "images/items/c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).0tadcie2ag.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691884"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DBS65qJoCI2zduN0ae58c+URJPnMeR/pyx6e6TuwM1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 08:54:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0tadcie2ag"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DBS65qJoCI2zduN0ae58c+URJPnMeR/pyx6e6TuwM1U="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "691884"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DBS65qJoCI2zduN0ae58c+URJPnMeR/pyx6e6TuwM1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 08:54:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DBS65qJoCI2zduN0ae58c+URJPnMeR/pyx6e6TuwM1U="
+        }
+      ]
+    },
+    {
       "Route": "images/items/ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).ar2ptbd0o0.png",
       "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png",
       "Selectors": [],
@@ -6595,6 +7543,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-ygyWII+tTeLm1bbfr/z8kURLjG7tQ2PJKlYL1tBvygo="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).igqui03j0w.png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123187"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jtzQUxTHice8TK9V39kYL9hNPE1+8UocHOirUZptBx0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:59:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "igqui03j0w"
+        },
+        {
+          "Name": "label",
+          "Value": "images/items/ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jtzQUxTHice8TK9V39kYL9hNPE1+8UocHOirUZptBx0="
+        }
+      ]
+    },
+    {
+      "Route": "images/items/ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png",
+      "AssetFile": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1123187"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jtzQUxTHice8TK9V39kYL9hNPE1+8UocHOirUZptBx0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 00:59:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jtzQUxTHice8TK9V39kYL9hNPE1+8UocHOirUZptBx0="
         }
       ]
     },

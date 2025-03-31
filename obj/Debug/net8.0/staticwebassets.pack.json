@@ -221,32 +221,72 @@
       "PackagePath": "staticwebassets\\images\\icons\\search-icon.png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png",
+      "PackagePath": "staticwebassets\\images\\items\\079b839a-15b5-407c-9e2c-026dc287a141_Screenshot (8).png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png",
       "PackagePath": "staticwebassets\\images\\items\\1c962887-ff74-4988-a661-42cb5928f55d_Screenshot (10).png"
     },
     {
-      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg",
-      "PackagePath": "staticwebassets\\images\\items\\2b49ba09-d00c-44e0-b3a1-172b17904e64_2024_Nitro_option_01_3840x2400.jpg"
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png",
+      "PackagePath": "staticwebassets\\images\\items\\212512ef-b253-4d1c-bf95-1ee8849d49d5_Screenshot (8).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png",
+      "PackagePath": "staticwebassets\\images\\items\\28f1f52f-e498-4dd2-ae4a-99703b7be0dd_Screenshot 2025-03-24 132449.png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png",
+      "PackagePath": "staticwebassets\\images\\items\\30dfe29c-1f9a-42f2-8265-e86ffd14638b_Screenshot (8).png"
     },
     {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png",
       "PackagePath": "staticwebassets\\images\\items\\395d88df-f548-42e0-8aa1-de9e85b38ba8_Screenshot (4).png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png",
+      "PackagePath": "staticwebassets\\images\\items\\9a4f8313-c75e-4f10-a6ba-b5e3ec487dbb_Screenshot 2025-03-24 132449.png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png",
       "PackagePath": "staticwebassets\\images\\items\\9fc55667-54d1-4ae5-abf2-2811062dc3d4_Screenshot (17).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png",
+      "PackagePath": "staticwebassets\\images\\items\\a255ca10-1368-40b2-9bf5-bc31a6d443fd_Screenshot 2025-03-24 132449.png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png",
+      "PackagePath": "staticwebassets\\images\\items\\a496047f-14cc-42a9-8f1d-bf0f6b0b8e3f_Screenshot (8).png"
     },
     {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg",
       "PackagePath": "staticwebassets\\images\\items\\a6cdf1ea-89cd-4aaa-8684-be157b7f2c8d_2024_Nitro_option_02_3840x2400.jpg"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png",
+      "PackagePath": "staticwebassets\\images\\items\\af215386-cb4f-4275-85b4-ec36307c42f0_Screenshot (8).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png",
+      "PackagePath": "staticwebassets\\images\\items\\b2d248a2-99be-42c1-b881-6b748b0c4f83_Screenshot 2025-03-24 132449.png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png",
       "PackagePath": "staticwebassets\\images\\items\\b5d38773-a2ea-4212-9dfd-4d0f11383bb3_Screenshot (4).png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png",
+      "PackagePath": "staticwebassets\\images\\items\\c49566ac-30cf-486c-9acf-a7346b514d17_Screenshot (5).png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png",
       "PackagePath": "staticwebassets\\images\\items\\ebbc3c00-3a18-410f-90ee-1f254018001b_Screenshot (17).png"
+    },
+    {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png",
+      "PackagePath": "staticwebassets\\images\\items\\ffd000c5-a82e-420a-9285-d84b1a2672eb_Screenshot (7).png"
     },
     {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\logo\\PHilMech.png",

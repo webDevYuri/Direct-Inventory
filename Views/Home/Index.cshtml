@@ -1,6 +1,6 @@
 ﻿@model PaginatedList<network_inventory_system.Models.Item>
 @{
-    ViewData["Title"] = "Home";
+    ViewData["Title"] = "Items";
 }
 
 <div class="sidebar-filter">
@@ -31,7 +31,6 @@
             </select>
             <label for="pageSize">Entries per page</label>
         </div>
-
 
         <div class="form-floating mb-2">
             <select name="condition" id="condition" class="form-select form-select-sm" onchange="this.form.submit()">
@@ -78,7 +77,7 @@
                     }
                 }
             </select>
-            <label for="accountableOfficer">Officer</label>
+            <label for="accountableOfficer">Accountable Officer</label>
         </div>
 
         <div class="form-floating mb-2">
@@ -125,8 +124,14 @@
                 <img src="~/images/icons/list-round-bullet-icon.png" style="width:30px; height:25px" />
                 <h4 class="mb-0 ms-2">Items</h4>
             </div>
+        </div>
+        <div class="d-flex text-end justify-content-between align-items-end mt-2 px-2">
+            <div class="d-flex gap-2" style="margin-bottom: -10px">
+                <p>Count: </p>
+                <p class="bg-warning px-2 shadow-sm" style="border-radius: 5px">@ViewData["TotalEntries"]</p>
+            </div>
             <div>
-                <a asp-action="Create" class="btn btn-primary btn-sm">
+                <a asp-action="Create" class="btn btn-primary btn-sm" style="width: 80px">
                     ADD
                 </a>
                 <a asp-action="ExportToExcel"
@@ -138,10 +143,11 @@
                    asp-route-division="@ViewData["DivisionFilter"]"
                    asp-route-fromDate="@ViewData["FromDateFilter"]"
                    asp-route-toDate="@ViewData["ToDateFilter"]"
-                   class="btn btn-success btn-sm">
+                   class="btn btn-success btn-sm" style="width: 80px">
                     EXPORT
                 </a>
-                <button onclick="printInventory()" class="btn btn-secondary btn-sm">
+                <button onclick="printInventory()" class="btn btn-secondary btn-sm" style="width: 80px">
+                    <i class="bi bi-printer"></i>
                     PRINT
                 </button>
             </div>
@@ -184,7 +190,7 @@
                                 <td>@item.PropertyNo</td>
                                 <td>@item.Model</td>
                                 <td>@item.Price.ToString("C")</td>
-                                <td>@item.DateOfPurchase.ToString("yyyy-MM-dd")</td>
+                                <td>@item.DateOfPurchase.ToString("MMM dd, yyyy")</td>
                                 <td>@item.Condition</td>
                                 <td>@item.Status</td>
                                 <td>@item.AccountableOfficer</td>
@@ -209,16 +215,25 @@
             </div>
 
             @{
-                var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
-                var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+                int currentPage = Model.PageIndex;
+                int totalPages = Model.TotalPages;
+                int maxPagesToShow = 5;
+                int startPage = currentPage;
+                int endPage = startPage + maxPagesToShow - 1;
+
+                if (endPage > totalPages)
+                {
+                    endPage = totalPages;
+                    startPage = (totalPages - maxPagesToShow + 1) > 0 ? (totalPages - maxPagesToShow + 1) : 1;
+                }
             }
 
             <nav aria-label="Page navigation" class="mt-4">
                 <ul class="pagination justify-content-center">
-                    <li class="page-item @prevDisabled">
+                    <li class="page-item @(currentPage == 1 ? "disabled" : "")">
                         <a asp-action="Index"
                            asp-route-sortOrder="@ViewData["CurrentSort"]"
-                           asp-route-pageNumber="@(Model.PageIndex - 1)"
+                           asp-route-pageNumber="@(currentPage - 1)"
                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
                            asp-route-condition="@ViewData["ConditionFilter"]"
                            asp-route-status="@ViewData["StatusFilter"]"
@@ -226,13 +241,13 @@
                            asp-route-division="@ViewData["DivisionFilter"]"
                            asp-route-fromDate="@ViewData["FromDateFilter"]"
                            asp-route-toDate="@ViewData["ToDateFilter"]"
-                           class="page-link text-center @prevDisabled" style="width: 90px">
+                           class="page-link">
                             Previous
                         </a>
                     </li>
-                    @for (int i = 1; i <= Model.TotalPages; i++)
+                    @for (int i = startPage; i <= endPage; i++)
                     {
-                        <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                        <li class="page-item @(i == currentPage ? "active" : "")">
                             <a asp-action="Index"
                                asp-route-sortOrder="@ViewData["CurrentSort"]"
                                asp-route-pageNumber="@i"
@@ -248,10 +263,10 @@
                             </a>
                         </li>
                     }
-                    <li class="page-item @nextDisabled">
+                    <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
                         <a asp-action="Index"
                            asp-route-sortOrder="@ViewData["CurrentSort"]"
-                           asp-route-pageNumber="@(Model.PageIndex + 1)"
+                           asp-route-pageNumber="@(currentPage + 1)"
                            asp-route-currentFilter="@ViewData["CurrentFilter"]"
                            asp-route-condition="@ViewData["ConditionFilter"]"
                            asp-route-status="@ViewData["StatusFilter"]"
@@ -259,12 +274,13 @@
                            asp-route-division="@ViewData["DivisionFilter"]"
                            asp-route-fromDate="@ViewData["FromDateFilter"]"
                            asp-route-toDate="@ViewData["ToDateFilter"]"
-                           class="page-link text-center @nextDisabled" style="width: 90px">
+                           class="page-link">
                             Next
                         </a>
                     </li>
                 </ul>
             </nav>
+
         </div>
     </div>
 </div>
@@ -281,6 +297,58 @@
         </div>
     </div>
 </div>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div id="successModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+                <div class="modal-header bg-success bg-opacity-10 border-0">
+                    <h5 class="modal-title text-success fw-bold">Success</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-5">
+                    <div class="text-center">
+                        <div class="mb-4 mx-auto" style="width: 80px; height: 80px; background-color: rgba(25, 135, 84, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                            <div style="width: 40px; height: 40px; position: relative;">
+                                <div style="width: 20px; height: 40px; border-right: 4px solid #198754; border-bottom: 4px solid #198754; position: absolute; right: 10px; top: 0; transform: rotate(45deg);"></div>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">@TempData["SuccessMessage"]</h5>
+                        <p class="text-muted mb-0">Your action was completed successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div id="errorModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="border-radius: 15px; overflow: hidden;">
+                <div class="modal-header bg-danger bg-opacity-10 border-0">
+                    <h5 class="modal-title text-danger fw-bold">Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-5">
+                    <div class="text-center">
+                        <div class="mb-4 mx-auto" style="width: 80px; height: 80px; background-color: rgba(220, 53, 69, 0.1); border-radius: 50%; display: flex; justify-content: center; align-items: center;">
+                            <div style="width: 40px; height: 40px; position: relative;">
+                                <div style="width: 40px; height: 4px; background-color: #dc3545; position: absolute; top: 18px; transform: rotate(45deg);"></div>
+                                <div style="width: 40px; height: 4px; background-color: #dc3545; position: absolute; top: 18px; transform: rotate(-45deg);"></div>
+                            </div>
+                        </div>
+                        <h5 class="fw-bold text-dark mb-2">@TempData["ErrorMessage"]</h5>
+                        <p class="text-muted mb-0">Please try again or contact support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
 
 
 @section Scripts {
@@ -329,5 +397,19 @@
                 });
             });
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            if ($('#successModal').length) {
+                $('#successModal').modal('show');
+                setTimeout(function () {
+                    $('#successModal').modal('hide');
+                }, 1000);
+            }
+
+            if ($('#errorModal').length) {
+                $('#errorModal').modal('show');
+            }
+        });
     </script>
 }

@@ -9,7 +9,7 @@ namespace network_inventory_system.Models
         [Key]
         public int Id { get; set; }
 
-        public string Photo { get; set; }
+        public string? Photo { get; set; }
 
         [Required]
         [MaxLength(100)]

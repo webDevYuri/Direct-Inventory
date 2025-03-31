@@ -30,7 +30,7 @@ namespace network_inventory_system.Controllers
             DateTime? fromDate,
             DateTime? toDate,
             int? pageNumber,
-            int? pageSize) 
+            int? pageSize)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -46,7 +46,7 @@ namespace network_inventory_system.Controllers
             ViewData["CategorySortParm"] = sortOrder == "Category" ? "category_desc" : "Category";
             ViewData["DivisionSortParm"] = sortOrder == "Division" ? "division_desc" : "Division";
 
-            ViewData["PageSizeOptions"] = new List<int> { 5, 10, 20, 50, 100 };
+            ViewData["PageSizeOptions"] = new List<int> { 10, 20, 50, 100 };
 
             int defaultPageSize = 10;
             int currentPageSize = pageSize ?? defaultPageSize;
@@ -116,84 +116,95 @@ namespace network_inventory_system.Controllers
                 items = items.Where(s => s.DateOfPurchase <= toDate.Value);
             }
 
-            switch (sortOrder)
+            if (string.IsNullOrEmpty(sortOrder))
             {
-                case "name_desc":
-                    items = items.OrderByDescending(s => s.Name);
-                    break;
-                case "Price":
-                    items = items.OrderBy(s => s.Price);
-                    break;
-                case "price_desc":
-                    items = items.OrderByDescending(s => s.Price);
-                    break;
-                case "Date":
-                    items = items.OrderBy(s => s.DateOfPurchase);
-                    break;
-                case "date_desc":
-                    items = items.OrderByDescending(s => s.DateOfPurchase);
-                    break;
-                case "SerialNo":
-                    items = items.OrderBy(s => s.SerialNo);
-                    break;
-                case "serialno_desc":
-                    items = items.OrderByDescending(s => s.SerialNo);
-                    break;
-                case "PropertyNo":
-                    items = items.OrderBy(s => s.PropertyNo);
-                    break;
-                case "propertyno_desc":
-                    items = items.OrderByDescending(s => s.PropertyNo);
-                    break;
-                case "ControlNo":
-                    items = items.OrderBy(s => s.ControlNo);
-                    break;
-                case "controlno_desc":
-                    items = items.OrderByDescending(s => s.ControlNo);
-                    break;
-                case "Model":
-                    items = items.OrderBy(s => s.Model);
-                    break;
-                case "model_desc":
-                    items = items.OrderByDescending(s => s.Model);
-                    break;
-                case "Condition":
-                    items = items.OrderBy(s => s.Condition);
-                    break;
-                case "condition_desc":
-                    items = items.OrderByDescending(s => s.Condition);
-                    break;
-                case "Status":
-                    items = items.OrderBy(s => s.Status);
-                    break;
-                case "status_desc":
-                    items = items.OrderByDescending(s => s.Status);
-                    break;
-                case "Officer":
-                    items = items.OrderBy(s => s.AccountableOfficer);
-                    break;
-                case "officer_desc":
-                    items = items.OrderByDescending(s => s.AccountableOfficer);
-                    break;
-                case "Category":
-                    items = items.OrderBy(s => s.Category);
-                    break;
-                case "category_desc":
-                    items = items.OrderByDescending(s => s.Category);
-                    break;
-                case "Division":
-                    items = items.OrderBy(s => s.Division);
-                    break;
-                case "division_desc":
-                    items = items.OrderByDescending(s => s.Division);
-                    break;
-                default:
-                    items = items.OrderBy(s => s.Name);
-                    break;
+                items = items.OrderByDescending(s => s.Id);
             }
+            else
+            {
+                switch (sortOrder)
+                {
+                    case "name_desc":
+                        items = items.OrderByDescending(s => s.Name);
+                        break;
+                    case "Price":
+                        items = items.OrderBy(s => s.Price);
+                        break;
+                    case "price_desc":
+                        items = items.OrderByDescending(s => s.Price);
+                        break;
+                    case "Date":
+                        items = items.OrderBy(s => s.DateOfPurchase);
+                        break;
+                    case "date_desc":
+                        items = items.OrderByDescending(s => s.DateOfPurchase);
+                        break;
+                    case "SerialNo":
+                        items = items.OrderBy(s => s.SerialNo);
+                        break;
+                    case "serialno_desc":
+                        items = items.OrderByDescending(s => s.SerialNo);
+                        break;
+                    case "PropertyNo":
+                        items = items.OrderBy(s => s.PropertyNo);
+                        break;
+                    case "propertyno_desc":
+                        items = items.OrderByDescending(s => s.PropertyNo);
+                        break;
+                    case "ControlNo":
+                        items = items.OrderBy(s => s.ControlNo);
+                        break;
+                    case "controlno_desc":
+                        items = items.OrderByDescending(s => s.ControlNo);
+                        break;
+                    case "Model":
+                        items = items.OrderBy(s => s.Model);
+                        break;
+                    case "model_desc":
+                        items = items.OrderByDescending(s => s.Model);
+                        break;
+                    case "Condition":
+                        items = items.OrderBy(s => s.Condition);
+                        break;
+                    case "condition_desc":
+                        items = items.OrderByDescending(s => s.Condition);
+                        break;
+                    case "Status":
+                        items = items.OrderBy(s => s.Status);
+                        break;
+                    case "status_desc":
+                        items = items.OrderByDescending(s => s.Status);
+                        break;
+                    case "Officer":
+                        items = items.OrderBy(s => s.AccountableOfficer);
+                        break;
+                    case "officer_desc":
+                        items = items.OrderByDescending(s => s.AccountableOfficer);
+                        break;
+                    case "Category":
+                        items = items.OrderBy(s => s.Category);
+                        break;
+                    case "category_desc":
+                        items = items.OrderByDescending(s => s.Category);
+                        break;
+                    case "Division":
+                        items = items.OrderBy(s => s.Division);
+                        break;
+                    case "division_desc":
+                        items = items.OrderByDescending(s => s.Division);
+                        break;
+                    default:
+                        items = items.OrderBy(s => s.Name);
+                        break;
+                }
+            }
+
+            int totalEntries = await items.CountAsync();
+            ViewData["TotalEntries"] = totalEntries;
 
             return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, currentPageSize));
         }
+
 
         public IActionResult Create()
         {
@@ -243,23 +254,15 @@ namespace network_inventory_system.Controllers
 
                     _context.Add(item);
                     await _context.SaveChangesAsync();
+
+                    TempData["SuccessMessage"] = "Product inserted successfully!";
                     return RedirectToAction(nameof(Index));
-                }
-                else
-                {
-                    foreach (var modelStateKey in ModelState.Keys)
-                    {
-                        var modelStateVal = ModelState[modelStateKey];
-                        foreach (var error in modelStateVal.Errors)
-                        {
-                            Console.WriteLine($"Key: {modelStateKey}, Error: {error.ErrorMessage}");
-                        }
-                    }
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", $"An error occurred: {ex.Message}");
+                Console.WriteLine(ex.InnerException?.Message);
+                TempData["ErrorMessage"] = $"An error occurred: {ex.Message}";
             }
 
             return View(item);
@@ -323,6 +326,9 @@ namespace network_inventory_system.Controllers
 
                     _context.Update(item);
                     await _context.SaveChangesAsync();
+
+                    TempData["SuccessMessage"] = "Updated Successfully!";
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -335,7 +341,6 @@ namespace network_inventory_system.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(item);
         }
@@ -347,8 +352,7 @@ namespace network_inventory_system.Controllers
                 return NotFound();
             }
 
-            var item = await _context.Items
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var item = await _context.Items.FirstOrDefaultAsync(m => m.Id == id);
             if (item == null)
             {
                 return NotFound();
@@ -375,6 +379,12 @@ namespace network_inventory_system.Controllers
 
                 _context.Items.Remove(item);
                 await _context.SaveChangesAsync();
+
+                TempData["SuccessMessage"] = "Deleted Successfully!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Item not found.";
             }
 
             return RedirectToAction(nameof(Index));
@@ -387,8 +397,7 @@ namespace network_inventory_system.Controllers
                 return NotFound();
             }
 
-            var item = await _context.Items
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var item = await _context.Items.FirstOrDefaultAsync(m => m.Id == id);
             if (item == null)
             {
                 return NotFound();
@@ -407,8 +416,7 @@ namespace network_inventory_system.Controllers
             DateTime? fromDate,
             DateTime? toDate)
         {
-            var items = from i in _context.Items
-                        select i;
+            var items = from i in _context.Items select i;
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -486,7 +494,6 @@ namespace network_inventory_system.Controllers
                 worksheet.Cell(currentRow, 6).Value = "Control No";
                 worksheet.Cell(currentRow, 7).Value = "Model";
                 worksheet.Cell(currentRow, 8).Value = "Price";
-                worksheet.Cell(currentRow, 9).Value = "Count";
                 worksheet.Cell(currentRow, 10).Value = "Date of Purchase";
                 worksheet.Cell(currentRow, 11).Value = "Condition";
                 worksheet.Cell(currentRow, 12).Value = "Status";
@@ -537,7 +544,10 @@ namespace network_inventory_system.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel
+            {
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            });
         }
     }
 }

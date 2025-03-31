@@ -25,7 +25,6 @@ namespace network_inventory_system.Migrations
                     ControlNo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Model = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Count = table.Column<int>(type: "int", nullable: false),
                     DateOfPurchase = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Condition = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
