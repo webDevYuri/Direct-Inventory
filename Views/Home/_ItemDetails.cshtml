@@ -1,4 +1,4 @@
-﻿@model network_inventory_system.Models.Item
+﻿  @model network_inventory_system.Models.Item
 
 <div class="row">
     <div class="col-md-4 text-center mb-3">
@@ -36,11 +36,15 @@
             </div>
             <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
                 <div style="font-weight: 600; color: #495057; width: 35%;">Price</div>
-                <div style="width: 60%;">@Model.Price.ToString("C")</div>
+                <div style="width: 60%;">
+                    @(Model.Price.HasValue ? Model.Price.Value.ToString("C") : "")
+                </div>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
                 <div style="font-weight: 600; color: #495057; width: 35%;">Date of Purchase</div>
-                <div style="width: 60%;">@Model.DateOfPurchase.ToString("yyyy-MM-dd")</div>
+                <div style="width: 60%;">
+                    @(Model.DateOfPurchase.HasValue ? Model.DateOfPurchase.Value.ToString("yyyy-MM-dd") : "")
+                </div>
             </div>
             <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #dee2e6;">
                 <div style="font-weight: 600; color: #495057; width: 35%;">Condition</div>

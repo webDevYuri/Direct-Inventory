@@ -15,39 +15,38 @@ namespace network_inventory_system.Models
         [MaxLength(100)]
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [MaxLength(50)]
-        public string SerialNo { get; set; }
+        public string? SerialNo { get; set; }
 
         [MaxLength(50)]
-        public string PropertyNo { get; set; }
+        public string? PropertyNo { get; set; }
 
         [MaxLength(50)]
-        public string ControlNo { get; set; }
+        public string? ControlNo { get; set; }
 
         [MaxLength(50)]
-        public string Model { get; set; }
+        public string? Model { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
 
-
-        public DateTime DateOfPurchase { get; set; }
-
-        [MaxLength(50)]
-        public string Condition { get; set; }
+        public DateTime? DateOfPurchase { get; set; }
 
         [MaxLength(50)]
-        public string Status { get; set; }
+        public string? Condition { get; set; }
+
+        [MaxLength(50)]
+        public string? Status { get; set; }
 
         [MaxLength(100)]
-        public string AccountableOfficer { get; set; }
+        public string? AccountableOfficer { get; set; }
 
         [MaxLength(50)]
-        public string Category { get; set; }
+        public string? Category { get; set; }
 
         [MaxLength(50)]
-        public string Division { get; set; }
+        public string? Division { get; set; }
     }
 }

@@ -27,6 +27,7 @@ namespace network_inventory_system.Controllers
             string status,
             string accountableOfficer,
             string division,
+            string category,     
             DateTime? fromDate,
             DateTime? toDate,
             int? pageNumber,
@@ -47,7 +48,6 @@ namespace network_inventory_system.Controllers
             ViewData["DivisionSortParm"] = sortOrder == "Division" ? "division_desc" : "Division";
 
             ViewData["PageSizeOptions"] = new List<int> { 10, 20, 50, 100 };
-
             int defaultPageSize = 10;
             int currentPageSize = pageSize ?? defaultPageSize;
             ViewData["CurrentPageSize"] = currentPageSize;
@@ -60,12 +60,12 @@ namespace network_inventory_system.Controllers
             {
                 searchString = currentFilter;
             }
-
             ViewData["CurrentFilter"] = searchString;
             ViewData["ConditionFilter"] = condition;
             ViewData["StatusFilter"] = status;
             ViewData["OfficerFilter"] = accountableOfficer;
             ViewData["DivisionFilter"] = division;
+            ViewData["CategoryFilter"] = category;  
             ViewData["FromDateFilter"] = fromDate;
             ViewData["ToDateFilter"] = toDate;
 
@@ -73,6 +73,7 @@ namespace network_inventory_system.Controllers
             ViewData["Statuses"] = await _context.Items.Select(i => i.Status).Distinct().ToListAsync();
             ViewData["Officers"] = await _context.Items.Select(i => i.AccountableOfficer).Distinct().ToListAsync();
             ViewData["Divisions"] = await _context.Items.Select(i => i.Division).Distinct().ToListAsync();
+            ViewData["Categories"] = await _context.Items.Select(i => i.Category).Distinct().ToListAsync();
 
             var items = from i in _context.Items
                         select i;
@@ -104,6 +105,11 @@ namespace network_inventory_system.Controllers
             if (!String.IsNullOrEmpty(division))
             {
                 items = items.Where(s => s.Division == division);
+            }
+
+            if (!String.IsNullOrEmpty(category))
+            {
+                items = items.Where(s => s.Category == category);
             }
 
             if (fromDate.HasValue)
@@ -204,7 +210,6 @@ namespace network_inventory_system.Controllers
 
             return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, currentPageSize));
         }
-
 
         public IActionResult Create()
         {
@@ -517,7 +522,9 @@ namespace network_inventory_system.Controllers
                     worksheet.Cell(currentRow, 6).Value = item.ControlNo;
                     worksheet.Cell(currentRow, 7).Value = item.Model;
                     worksheet.Cell(currentRow, 8).Value = item.Price;
-                    worksheet.Cell(currentRow, 10).Value = item.DateOfPurchase.ToString("yyyy-MM-dd");
+                    worksheet.Cell(currentRow, 10).Value = item.DateOfPurchase.HasValue
+                    ? item.DateOfPurchase.Value.ToString("yyyy-MM-dd")
+                    : "";
                     worksheet.Cell(currentRow, 11).Value = item.Condition;
                     worksheet.Cell(currentRow, 12).Value = item.Status;
                     worksheet.Cell(currentRow, 13).Value = item.AccountableOfficer;
