@@ -201,6 +201,10 @@
       "PackagePath": "staticwebassets\\images\\icons\\eye-look-icon.png"
     },
     {
+      "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\icons\\filter-icon.png",
+      "PackagePath": "staticwebassets\\images\\icons\\filter-icon.png"
+    },
+    {
       "Id": "C:\\Users\\Yuri Gonzaga\\Desktop\\network-inventory-system\\network-inventory-system\\wwwroot\\images\\icons\\list-round-bullet-icon.png",
       "PackagePath": "staticwebassets\\images\\icons\\list-round-bullet-icon.png"
     },

@@ -47,6 +47,7 @@ wwwroot\favicon.ico
 wwwroot\images\icons\database-download-icon.png
 wwwroot\images\icons\edit-list-icon.png
 wwwroot\images\icons\eye-look-icon.png
+wwwroot\images\icons\filter-icon.png
 wwwroot\images\icons\list-round-bullet-icon.png
 wwwroot\images\icons\plus-line-icon.png
 wwwroot\images\icons\printer-icon.png

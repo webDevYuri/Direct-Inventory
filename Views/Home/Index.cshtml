@@ -3,266 +3,399 @@
     ViewData["Title"] = "Items";
 }
 
-<div class="sidebar-filter">
-    <center>
-        <div class="d-flex align-items-center justify-content-center py-3 mb-3 border-2 border-success border" style="width: 100px; height: 100px; border-radius: 30% 0 30% 0; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
-            <img src="~/images/logo/PHilMech.png" class="img-fluid" style="width: 70px" />
+<div class="mobile-header py-2 px-3 d-flex justify-content-between align-items-center d-lg-none">
+    <div class="d-flex align-items-center">
+        <button class="btn btn-primary sidebar-toggle me-3" id="sidebarToggle">
+            ≡
+        </button>
+        <div class="d-flex">
+            <img src="~/images/icons/list-round-bullet-icon.png" class="d-none d-md-block" style="width:24px; height:20px" />
+            <h5 class="mb-0 ms-md-2">Items</h5>
         </div>
-    </center>
-    <form asp-action="Index" method="get" id="filterForm">
-        <div class="mb-2 position-relative">
-            <input type="text" name="SearchString" id="SearchString" autocomplete="off" value="@ViewData["CurrentFilter"]" class="form-control form-control-sm py-2" placeholder="Search...">
-            <img src="~/images/icons/search-icon.png" class="position-absolute" style="right: 10px; top: 10px; width: 20px;" alt="Seach Icon" />
-        </div>
-        <div class="form-floating mb-2">
-            <select name="pageSize" id="pageSize" class="form-select form-select-sm" onchange="this.form.submit()">
-                @foreach (int size in (List<int>)ViewData["PageSizeOptions"])
-                {
-                    if (size == (int)ViewData["CurrentPageSize"])
-                    {
-                        <option value="@size" selected="selected">@size</option>
-                    }
-                    else
-                    {
-                        <option value="@size">@size</option>
-                    }
-                }
-            </select>
-            <label for="pageSize">Entries per page</label>
-        </div>
-        <div class="form-floating mb-2">
-            <select name="category" id="category" class="form-select form-select-sm" onchange="this.form.submit()">
-                <option value="">All Categories</option>
-                @foreach (var cat in (IEnumerable<string>)ViewData["Categories"])
-                {
-                    if (!string.IsNullOrEmpty(cat))
-                    {
-                        <option value="@cat" selected="@(ViewData["CategoryFilter"]?.ToString() == cat)">
-                            @cat
-                        </option>
-                    }
-                }
-            </select>
-            <label for="category">Category</label>
-        </div>
-        <div class="form-floating mb-2">
-            <select name="status" id="status" class="form-select form-select-sm" onchange="this.form.submit()">
-                <option value="">All Statuses</option>
-                @foreach (var status in (IEnumerable<string>)ViewData["Statuses"])
-                {
-                    if (!string.IsNullOrEmpty(status))
-                    {
-                        <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status)">
-                            @status
-                        </option>
-                    }
-                }
-            </select>
-            <label for="status">Status</label>
-        </div>
-        <div class="form-floating mb-2">
-            <select name="accountableOfficer" id="accountableOfficer" class="form-select form-select-sm" onchange="this.form.submit()">
-                <option value="">All Officers</option>
-                @foreach (var officer in (IEnumerable<string>)ViewData["Officers"])
-                {
-                    if (!string.IsNullOrEmpty(officer))
-                    {
-                        <option value="@officer" selected="@(ViewData["OfficerFilter"]?.ToString() == officer)">
-                            @officer
-                        </option>
-                    }
-                }
-            </select>
-            <label for="accountableOfficer">Accountable Officer</label>
-        </div>
-        <div class="form-floating mb-2">
-            <select name="division" id="division" class="form-select form-select-sm" onchange="this.form.submit()">
-                <option value="">All Divisions</option>
-                @foreach (var division in (IEnumerable<string>)ViewData["Divisions"])
-                {
-                    if (!string.IsNullOrEmpty(division))
-                    {
-                        <option value="@division" selected="@(ViewData["DivisionFilter"]?.ToString() == division)">
-                            @division
-                        </option>
-                    }
-                }
-            </select>
-            <label for="division">Division</label>
-        </div>
-        <div class="form-floating mb-2">
-            <input type="date" name="fromDate" id="fromDate"
-                   value="@(ViewData["FromDateFilter"] != null ? ((DateTime)ViewData["FromDateFilter"]).ToString("yyyy-MM-dd") : "")"
-                   class="form-control form-control-sm" placeholder="From Date">
-            <label for="fromDate">From Date</label>
-        </div>
-        <div class="form-floating mb-2">
-            <input type="date" name="toDate" id="toDate"
-                   value="@(ViewData["ToDateFilter"] != null ? ((DateTime)ViewData["ToDateFilter"]).ToString("yyyy-MM-dd") : "")"
-                   class="form-control form-control-sm" placeholder="To Date">
-            <label for="toDate">To Date</label>
-        </div>
-        <div class="d-flex flex-column gap-2 justify-content-center">
-            <button type="submit" class="btn btn-primary btn-sm">APPLY</button>
-            <a asp-action="Index" class="btn btn-outline-secondary btn-sm">RESET</a>
-        </div>
-    </form>
-</div>
-<div class="items-table">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <div class="d-flex">
-                <img src="~/images/icons/list-round-bullet-icon.png" style="width:30px; height:25px" />
-                <h4 class="mb-0 ms-2">Items</h4>
-            </div>
-        </div>
-        <div class="d-flex text-end justify-content-between align-items-end mt-2 px-2">
-            <div class="d-flex gap-2" style="margin-bottom: -10px">
-                <p>Count: </p>
-                <p class="bg-warning px-2 shadow-sm" style="border-radius: 5px">@ViewData["TotalEntries"]</p>
-            </div>
-            <div>
-                <a asp-action="Create" class="btn btn-primary btn-sm" style="width: 80px">
-                    ADD
-                </a>
-                <a asp-action="ExportToExcel"
-                   asp-route-sortOrder="@ViewData["CurrentSort"]"
-                   asp-route-searchString="@ViewData["CurrentFilter"]"
-                   asp-route-condition="@ViewData["ConditionFilter"]"
-                   asp-route-status="@ViewData["StatusFilter"]"
-                   asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                   asp-route-division="@ViewData["DivisionFilter"]"
-                   asp-route-fromDate="@ViewData["FromDateFilter"]"
-                   asp-route-toDate="@ViewData["ToDateFilter"]"
-                   class="btn btn-success btn-sm" style="width: 80px">
-                    EXPORT
-                </a>
-                <button onclick="printInventory()" class="btn btn-secondary btn-sm" style="width: 80px">
-                    <i class="bi bi-printer"></i>
-                    PRINT
-                </button>
-            </div>
-        </div>
-        <div class="card-body p-2">
-            <div class="table-responsive">
-                <table class="w-full table table-hover table-bordered small" id="inventoryTable">
-                    <thead class="table-secondary">
-                        <tr class="text-uppercase" style="font-size: 12px; text-align: center">
-                            <th>Name</th>
-                            <th>Serial No</th>
-                            <th>Property No</th>
-                            <th>Model</th>
-                            <th>Price</th>
-                            <th>Purchase Date</th>
-                            <th>Condition</th>
-                            <th>Status</th>
-                            <th>Officer</th>
-                            <th>Division</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr class="text-center" style="font-size: 11px">
-                                <td>@item.Name</td>
-                                <td>@item.SerialNo</td>
-                                <td>@item.PropertyNo</td>
-                                <td>@item.Model</td>
-                                <td>@(item.Price.HasValue ? item.Price.Value.ToString("C") : "")</td>
-                                <td>@(item.DateOfPurchase.HasValue ? item.DateOfPurchase.Value.ToString("MMM dd, yyyy") : "")</td>
-                                <td>@item.Condition</td>
-                                <td>@item.Status</td>
-                                <td>@item.AccountableOfficer</td>
-                                <td>@item.Division</td>
-                                <td>
-                                    <div class="btn-group btn-group-sm" role="group">
-                                        <button style="width: 35px" type="button" class="btn btn-primary view-details d-flex align-items-center justify-content-center" data-id="@item.Id">
-                                            <img src="~/images/icons/eye-look-icon.png" alt="Eye" style="width: 20px" />
-                                        </button>
-                                        <a style="width: 35px" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning d-flex align-items-center justify-content-center">
-                                            <img src="~/images/icons/edit-list-icon.png" alt="Eye" style="width: 20px" />
-                                        </a>
-                                        <a style="width: 35px" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger d-flex align-items-center justify-content-center">
-                                            <img src="~/images/icons/recycle-bin-line-icon.png" alt="Eye" style="width: 20px" />
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-            @{
-                int currentPage = Model.PageIndex;
-                int totalPages = Model.TotalPages;
-                int maxPagesToShow = 5;
-                int startPage = currentPage;
-                int endPage = startPage + maxPagesToShow - 1;
-
-                if (endPage > totalPages)
-                {
-                    endPage = totalPages;
-                    startPage = (totalPages - maxPagesToShow + 1) > 0 ? (totalPages - maxPagesToShow + 1) : 1;
-                }
-            }
-            <nav aria-label="Page navigation" class="mt-4">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item @(currentPage == 1 ? "disabled" : "")">
-                        <a asp-action="Index"
-                           asp-route-sortOrder="@ViewData["CurrentSort"]"
-                           asp-route-pageNumber="@(currentPage - 1)"
-                           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                           asp-route-condition="@ViewData["ConditionFilter"]"
-                           asp-route-status="@ViewData["StatusFilter"]"
-                           asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                           asp-route-division="@ViewData["DivisionFilter"]"
-                           asp-route-fromDate="@ViewData["FromDateFilter"]"
-                           asp-route-toDate="@ViewData["ToDateFilter"]"
-                           class="page-link">
-                            Previous
-                        </a>
-                    </li>
-                    @for (int i = startPage; i <= endPage; i++)
-                    {
-                        <li class="page-item @(i == currentPage ? "active" : "")">
-                            <a asp-action="Index"
-                               asp-route-sortOrder="@ViewData["CurrentSort"]"
-                               asp-route-pageNumber="@i"
-                               asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                               asp-route-condition="@ViewData["ConditionFilter"]"
-                               asp-route-status="@ViewData["StatusFilter"]"
-                               asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                               asp-route-division="@ViewData["DivisionFilter"]"
-                               asp-route-fromDate="@ViewData["FromDateFilter"]"
-                               asp-route-toDate="@ViewData["ToDateFilter"]"
-                               class="page-link">
-                                @i
-                            </a>
-                        </li>
-                    }
-                    <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
-                        <a asp-action="Index"
-                           asp-route-sortOrder="@ViewData["CurrentSort"]"
-                           asp-route-pageNumber="@(currentPage + 1)"
-                           asp-route-currentFilter="@ViewData["CurrentFilter"]"
-                           asp-route-condition="@ViewData["ConditionFilter"]"
-                           asp-route-status="@ViewData["StatusFilter"]"
-                           asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
-                           asp-route-division="@ViewData["DivisionFilter"]"
-                           asp-route-fromDate="@ViewData["FromDateFilter"]"
-                           asp-route-toDate="@ViewData["ToDateFilter"]"
-                           class="page-link">
-                            Next
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+    </div>
+    <div class="d-flex align-items-center">
+        <span class="badge bg-success count-badge me-2">@ViewData["TotalEntries"]</span>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm" type="button" id="actionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions ▾
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="actionDropdown">
+                <li><a class="dropdown-item" asp-action="Create">Add New</a></li>
+                <li>
+                    <a class="dropdown-item" asp-action="ExportToExcel"
+                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                       asp-route-searchString="@ViewData["CurrentFilter"]"
+                       asp-route-condition="@ViewData["ConditionFilter"]"
+                       asp-route-status="@ViewData["StatusFilter"]"
+                       asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                       asp-route-division="@ViewData["DivisionFilter"]"
+                       asp-route-fromDate="@ViewData["FromDateFilter"]"
+                       asp-route-toDate="@ViewData["ToDateFilter"]">Export</a>
+                </li>
+                <li><button class="dropdown-item" onclick="printInventory()">Print</button></li>
+            </ul>
         </div>
     </div>
 </div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="container-fluid p-0">
+    <div class="row g-0">
+        <div class="col-lg-3 col-xl-2 sidebar-filter" id="sidebar">
+            <button class="btn btn-light sidebar-close d-lg-none" id="closeSidebar">
+                ✕
+            </button>
+            <center class="mb-3">
+                <div class="d-flex align-items-center justify-content-center py-3 d-none d-lg-block mb-3 border-2 border-success border" style="width: 75px; height: 75px; border-radius: 30% 0 30% 0; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                    <img src="~/images/logo/PHilMech.png" class="img-fluid" style="width: 50px" />
+                </div>
+            </center>
+            <form asp-action="Index" method="get" id="filterForm">
+                <div class="position-relative mb-2">
+                    <input type="text" name="SearchString" id="SearchString" autocomplete="off" value="@ViewData["CurrentFilter"]" class="form-control py-2" placeholder="Search...">
+                    <img src="~/images/icons/search-icon.png" class="position-absolute" style="right: 10px; top: 10px; width: 20px;" alt="Search Icon" />
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="pageSize" id="pageSize" class="form-select" onchange="this.form.submit()">
+                        @foreach (int size in (List<int>)ViewData["PageSizeOptions"])
+                        {
+                            if (size == (int)ViewData["CurrentPageSize"])
+                            {
+                                <option value="@size" selected="selected">@size</option>
+                            }
+                            else
+                            {
+                                <option value="@size">@size</option>
+                            }
+                        }
+                    </select>
+                    <label for="pageSize">Entries per page</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="category" id="category" class="form-select" onchange="this.form.submit()">
+                        <option value="">All Categories</option>
+                        @foreach (var cat in (IEnumerable<string>)ViewData["Categories"])
+                        {
+                            if (!string.IsNullOrEmpty(cat))
+                            {
+                                <option value="@cat" selected="@(ViewData["CategoryFilter"]?.ToString() == cat)">
+                                    @cat
+                                </option>
+                            }
+                        }
+                    </select>
+                    <label for="category">Category</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="status" id="status" class="form-select" onchange="this.form.submit()">
+                        <option value="">All Statuses</option>
+                        @foreach (var status in (IEnumerable<string>)ViewData["Statuses"])
+                        {
+                            if (!string.IsNullOrEmpty(status))
+                            {
+                                <option value="@status" selected="@(ViewData["StatusFilter"]?.ToString() == status)">
+                                    @status
+                                </option>
+                            }
+                        }
+                    </select>
+                    <label for="status">Status</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="condition" id="condition" class="form-select" onchange="this.form.submit()">
+                        <option value="">All Condition</option>
+                        @foreach (var condition in (IEnumerable<string>)ViewData["Conditions"])
+                        {
+                            if (!string.IsNullOrEmpty(condition))
+                            {
+                                <option value="@condition" selected="@(ViewData["ConditionFilter"]?.ToString() == condition)">
+                                    @condition
+                                </option>
+                            }
+                        }
+                    </select>
+                    <label for="status">Condition</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="accountableOfficer" id="accountableOfficer" class="form-select" onchange="this.form.submit()">
+                        <option value="">All Officers</option>
+                        @foreach (var officer in (IEnumerable<string>)ViewData["Officers"])
+                        {
+                            if (!string.IsNullOrEmpty(officer))
+                            {
+                                <option value="@officer" selected="@(ViewData["OfficerFilter"]?.ToString() == officer)">
+                                    @officer
+                                </option>
+                            }
+                        }
+                    </select>
+                    <label for="accountableOfficer">Accountable Officer</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <select name="division" id="division" class="form-select" onchange="this.form.submit()">
+                        <option value="">All Divisions</option>
+                        @foreach (var division in (IEnumerable<string>)ViewData["Divisions"])
+                        {
+                            if (!string.IsNullOrEmpty(division))
+                            {
+                                <option value="@division" selected="@(ViewData["DivisionFilter"]?.ToString() == division)">
+                                    @division
+                                </option>
+                            }
+                        }
+                    </select>
+                    <label for="division">Division</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="date" name="fromDate" id="fromDate"
+                           value="@(ViewData["FromDateFilter"] != null ? ((DateTime)ViewData["FromDateFilter"]).ToString("yyyy-MM-dd") : "")"
+                           class="form-control" placeholder="From Date">
+                    <label for="fromDate">From Date</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="date" name="toDate" id="toDate"
+                           value="@(ViewData["ToDateFilter"] != null ? ((DateTime)ViewData["ToDateFilter"]).ToString("yyyy-MM-dd") : "")"
+                           class="form-control" placeholder="To Date">
+                    <label for="toDate">To Date</label>
+                </div>
+                <div class="d-flex gap-1 mb-2">
+                    <button type="submit" class="btn btn-primary" style="width: 50%">
+                        APPLY
+                    </button>
+                    <a asp-action="Index" class="btn btn-outline-secondary" style="width: 50%">
+                        RESET
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-lg-9 col-xl-10 items-table">
+            <div class="card">
+                <div class="card-header d-none d-lg-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <img src="~/images/icons/list-round-bullet-icon.png" style="width:30px; height:25px" />
+                        <h4 class="mb-0 ms-2">Items</h4>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex justify-content-between align-items-end mt-2 px-3">
+                    <div class="d-flex gap-2 align-items-center count-container">
+                        <p class="mb-0">Count: </p>
+                        <p class="px-3 py-1 mb-0 bg-success text-white fs-5 rounded-3 shadow-sm">@ViewData["TotalEntries"]</p>
+                    </div>
+                    <div class="action-buttons-container">
+                        <a asp-action="Create" class="btn btn-primary">
+                            ADD
+                        </a>
+                        <a asp-action="ExportToExcel"
+                           asp-route-sortOrder="@ViewData["CurrentSort"]"
+                           asp-route-searchString="@ViewData["CurrentFilter"]"
+                           asp-route-condition="@ViewData["ConditionFilter"]"
+                           asp-route-status="@ViewData["StatusFilter"]"
+                           asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                           asp-route-division="@ViewData["DivisionFilter"]"
+                           asp-route-fromDate="@ViewData["FromDateFilter"]"
+                           asp-route-toDate="@ViewData["ToDateFilter"]"
+                           class="btn btn-success">
+                            EXPORT
+                        </a>
+                        <button onclick="printInventory()" class="btn btn-secondary">
+                            PRINT
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-3">
+                    <div class="table-responsive desktop-table">
+                        <table class="table table-hover table-bordered small" id="inventoryTable">
+                            <thead class="table-secondary">
+                                <tr class="text-uppercase" style="font-size: 12px; text-align: center">
+                                    <th>Name</th>
+                                    <th>Serial No</th>
+                                    <th>Property No</th>
+                                    <th>Model</th>
+                                    <th>Price</th>
+                                    <th>Purchase Date</th>
+                                    <th>Condition</th>
+                                    <th>Status</th>
+                                    <th>Officer</th>
+                                    <th>Division</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="text-center" style="font-size: 11px">
+                                        <td>@item.Name</td>
+                                        <td>@item.SerialNo</td>
+                                        <td>@item.PropertyNo</td>
+                                        <td>@item.Model</td>
+                                        <td>@(item.Price.HasValue ? item.Price.Value.ToString("C") : "")</td>
+                                        <td>@(item.DateOfPurchase.HasValue ? item.DateOfPurchase.Value.ToString("MMM dd, yyyy") : "")</td>
+                                        <td>@item.Condition</td>
+                                        <td>@item.Status</td>
+                                        <td>@item.AccountableOfficer</td>
+                                        <td>@item.Division</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <button style="width: 35px" type="button" class="btn btn-primary view-details d-flex align-items-center justify-content-center" data-id="@item.Id">
+                                                    <img src="~/images/icons/eye-look-icon.png" alt="View" style="width: 20px" />
+                                                </button>
+                                                <a style="width: 35px" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning d-flex align-items-center justify-content-center">
+                                                    <img src="~/images/icons/edit-list-icon.png" alt="Edit" style="width: 20px" />
+                                                </a>
+                                                <a style="width: 35px" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger d-flex align-items-center justify-content-center">
+                                                    <img src="~/images/icons/recycle-bin-line-icon.png" alt="Delete" style="width: 20px" />
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mobile-items-container">
+                        @foreach (var item in Model)
+                        {
+                            <div class="mobile-item-card">
+                                <div class="mobile-item-header position-relative p-3">
+                                    <h6 class="mobile-item-name mb-0">@item.Name</h6>
+                                    @{
+                                        string statusClass = "badge-info";
+                                        if (item.Status == "Active") statusClass = "badge-success";
+                                        else if (item.Status == "Inactive") statusClass = "badge-danger";
+                                        else if (item.Status == "Maintenance") statusClass = "badge-warning";
+                                    }
+                                    <span class="custom-badge @statusClass mobile-item-status-badge">@item.Status</span>
+                                </div>
+                                <div class="mobile-item-body">
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Serial No:</span>
+                                        <span>@(string.IsNullOrEmpty(item.SerialNo) ? "-" : item.SerialNo)</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Property No:</span>
+                                        <span>@(string.IsNullOrEmpty(item.PropertyNo) ? "-" : item.PropertyNo)</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Model:</span>
+                                        <span>@(string.IsNullOrEmpty(item.Model) ? "-" : item.Model)</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Price:</span>
+                                        <span>@(item.Price.HasValue ? item.Price.Value.ToString("C") : "-")</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Purchase Date:</span>
+                                        <span>@(item.DateOfPurchase.HasValue ? item.DateOfPurchase.Value.ToString("MMM dd, yyyy") : "-")</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Condition:</span>
+                                        <span>@(string.IsNullOrEmpty(item.Condition) ? "-" : item.Condition)</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Officer:</span>
+                                        <span>@(string.IsNullOrEmpty(item.AccountableOfficer) ? "-" : item.AccountableOfficer)</span>
+                                    </div>
+                                    <div class="mobile-item-row">
+                                        <span class="mobile-item-label">Division:</span>
+                                        <span>@(string.IsNullOrEmpty(item.Division) ? "-" : item.Division)</span>
+                                    </div>
+                                </div>
+                                <div class="mobile-item-footer">
+                                    <div class="mobile-action-buttons">
+                                        <button type="button" class="btn btn-primary mobile-action-button view-details" data-id="@item.Id">
+                                            <img src="~/images/icons/eye-look-icon.png" alt="View" style="width: 18px; height: 18px" />
+                                            View
+                                        </button>
+                                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning mobile-action-button">
+                                            <img src="~/images/icons/edit-list-icon.png" alt="Edit" style="width: 18px; height: 18px" />
+                                            Edit
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger mobile-action-button">
+                                            <img src="~/images/icons/recycle-bin-line-icon.png" alt="Delete" style="width: 18px; height: 18px" />
+                                            Delete
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    @{
+                        int currentPage = Model.PageIndex;
+                        int totalPages = Model.TotalPages;
+                        int maxPagesToShow = 5;
+                        int startPage = currentPage;
+                        int endPage = startPage + maxPagesToShow - 1;
+
+                        if (endPage > totalPages)
+                        {
+                            endPage = totalPages;
+                            startPage = (totalPages - maxPagesToShow + 1) > 0 ? (totalPages - maxPagesToShow + 1) : 1;
+                        }
+                    }
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center flex-wrap">
+                            <li class="page-item @(currentPage == 1 ? "disabled" : "")">
+                                <a asp-action="Index"
+                                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                                   asp-route-pageNumber="@(currentPage - 1)"
+                                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                                   asp-route-condition="@ViewData["ConditionFilter"]"
+                                   asp-route-status="@ViewData["StatusFilter"]"
+                                   asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                                   asp-route-division="@ViewData["DivisionFilter"]"
+                                   asp-route-fromDate="@ViewData["FromDateFilter"]"
+                                   asp-route-toDate="@ViewData["ToDateFilter"]"
+                                   class="page-link">
+                                    Prev
+                                </a>
+                            </li>
+                            @for (int i = startPage; i <= endPage; i++)
+                            {
+                                <li class="page-item @(i == currentPage ? "active" : "")">
+                                    <a asp-action="Index"
+                                       asp-route-sortOrder="@ViewData["CurrentSort"]"
+                                       asp-route-pageNumber="@i"
+                                       asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                                       asp-route-condition="@ViewData["ConditionFilter"]"
+                                       asp-route-status="@ViewData["StatusFilter"]"
+                                       asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                                       asp-route-division="@ViewData["DivisionFilter"]"
+                                       asp-route-fromDate="@ViewData["FromDateFilter"]"
+                                       asp-route-toDate="@ViewData["ToDateFilter"]"
+                                       class="page-link">
+                                        @i
+                                    </a>
+                                </li>
+                            }
+                            <li class="page-item @(currentPage == totalPages ? "disabled" : "")">
+                                <a asp-action="Index"
+                                   asp-route-sortOrder="@ViewData["CurrentSort"]"
+                                   asp-route-pageNumber="@(currentPage + 1)"
+                                   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+                                   asp-route-condition="@ViewData["ConditionFilter"]"
+                                   asp-route-status="@ViewData["StatusFilter"]"
+                                   asp-route-accountableOfficer="@ViewData["OfficerFilter"]"
+                                   asp-route-division="@ViewData["DivisionFilter"]"
+                                   asp-route-fromDate="@ViewData["FromDateFilter"]"
+                                   asp-route-toDate="@ViewData["ToDateFilter"]"
+                                   class="page-link">
+                                    Next
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="itemDetailsModal" tabindex="-1" aria-labelledby="itemDetailsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content" style="border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
             <div class="modal-header" style="background: linear-gradient(120deg, #30c57d, #2ddf89);">
                 <h5 class="modal-title text-white" id="itemDetailsModalLabel">Item Details</h5>
@@ -385,3 +518,4 @@
         });
     </script>
 }
+
